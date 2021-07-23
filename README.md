@@ -1,2 +1,2 @@
-# merryll-consent-manager
-An elegant way to show your website complies with the EU Cookie Law / GDPR.
+# merryll Consent Manager
+An elegant way to make your website ready for GDPR regulations.
