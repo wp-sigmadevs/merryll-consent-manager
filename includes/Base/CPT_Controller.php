@@ -57,11 +57,11 @@ class CPT_Controller {
 	private function define_cpt() {
 		$this->custom_post_types = array(
 			array(
-				'name'   => __( 'merryll Cookies', 'merryll-consent-manager' ),
+				'name'   => __( 'merryll Cookie', 'merryll-consent-manager' ),
 				'slug'   => 'merryll_cookies',
 				'labels' => array(
 					'name'         => __( 'Cookie List', 'merryll-consent-manager' ),
-					'all_items'    => __( 'Cookies', 'merryll-consent-manager' ),
+					'all_items'    => __( 'Cookie List', 'merryll-consent-manager' ),
 					'edit_item'    => __( 'Edit Cookie', 'merryll-consent-manager' ),
 					'view_item'    => __( 'View Cookie', 'merryll-consent-manager' ),
 					'search_items' => __( 'Search Cookie', 'merryll-consent-manager' ),

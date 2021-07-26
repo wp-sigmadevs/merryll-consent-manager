@@ -24,12 +24,12 @@ class InstalledVersions
 private static $installed = array (
   'root' => 
   array (
-    'pretty_version' => '1.0.0+no-version-set',
-    'version' => '1.0.0.0',
+    'pretty_version' => 'dev-master',
+    'version' => 'dev-master',
     'aliases' => 
     array (
     ),
-    'reference' => NULL,
+    'reference' => '1b8885344f01d64e5efd7caed9a1fbb6fdb65dc7',
     'name' => 'merryll/merryll-consent-manager',
   ),
   'versions' => 
@@ -45,12 +45,12 @@ private static $installed = array (
     ),
     'merryll/merryll-consent-manager' => 
     array (
-      'pretty_version' => '1.0.0+no-version-set',
-      'version' => '1.0.0.0',
+      'pretty_version' => 'dev-master',
+      'version' => 'dev-master',
       'aliases' => 
       array (
       ),
-      'reference' => NULL,
+      'reference' => '1b8885344f01d64e5efd7caed9a1fbb6fdb65dc7',
     ),
   ),
 );

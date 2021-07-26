@@ -10,7 +10,7 @@
 
 namespace Merryll\Merryll_Consent_Manager\Base;
 
-use Merryll\Merryll_Consent_Manager\Admin\Admin_Page;
+use Merryll\Merryll_Consent_Manager\Admin\Admin_Pages;
 use Merryll\Merryll_Consent_Manager\Admin\Admin_Enqueue;
 use Merryll\Merryll_Consent_Manager\Base\Base_Controller;
 
@@ -32,8 +32,8 @@ class Admin_Controller extends Base_Controller {
 	 */
 	private static function get_services() {
 		return array(
-			// Admin_Page::class,
-			// Admin_Enqueue::class,
+			Admin_Pages::class,
+			Admin_Enqueue::class,
 		);
 	}
 

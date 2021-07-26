@@ -6,6 +6,11 @@ namespace Composer\Autoload;
 
 class ComposerStaticInit1f70f26629fa42db070588753d39700d
 {
+    public static $files = array (
+        '505448acca3daecb478e23b90948867a' => __DIR__ . '/..' . '/extensions/carbon-field-switch/field.php',
+        '9d79b5edb475159b1459be558aef3e7d' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/functions.php',
+    );
+
     public static $prefixLengthsPsr4 = array (
         'M' => 
         array (
@@ -14,6 +19,7 @@ class ComposerStaticInit1f70f26629fa42db070588753d39700d
         'C' => 
         array (
             'Carbon_Fields\\' => 14,
+            'Carbon_Field_Switch\\' => 20,
         ),
     );
 
@@ -26,9 +32,14 @@ class ComposerStaticInit1f70f26629fa42db070588753d39700d
         array (
             0 => __DIR__ . '/..' . '/htmlburger/carbon-fields/core',
         ),
+        'Carbon_Field_Switch\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/extensions/carbon-field-switch/core',
+        ),
     );
 
     public static $classMap = array (
+        'Carbon_Field_Switch\\Switch_Field' => __DIR__ . '/..' . '/extensions/carbon-field-switch/core/Switch_Field.php',
         'Carbon_Fields\\Block' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Block.php',
         'Carbon_Fields\\Carbon_Fields' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Carbon_Fields.php',
         'Carbon_Fields\\Container' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Container.php',
@@ -153,16 +164,22 @@ class ComposerStaticInit1f70f26629fa42db070588753d39700d
         'Carbon_Fields\\Widget' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Widget.php',
         'Carbon_Fields\\Widget\\Widget' => __DIR__ . '/..' . '/htmlburger/carbon-fields/core/Widget/Widget.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'Merryll\\Merryll_Consent_Manager\\Admin\\Admin_Enqueue' => __DIR__ . '/../..' . '/includes/Admin/Admin_Enqueue.php',
+        'Merryll\\Merryll_Consent_Manager\\Admin\\Admin_Pages' => __DIR__ . '/../..' . '/includes/Admin/Admin_Pages.php',
         'Merryll\\Merryll_Consent_Manager\\Base\\Activate' => __DIR__ . '/../..' . '/includes/Base/Activate.php',
         'Merryll\\Merryll_Consent_Manager\\Base\\Admin_Controller' => __DIR__ . '/../..' . '/includes/Base/Admin_Controller.php',
         'Merryll\\Merryll_Consent_Manager\\Base\\Base_Controller' => __DIR__ . '/../..' . '/includes/Base/Base_Controller.php',
+        'Merryll\\Merryll_Consent_Manager\\Base\\CF_Controller' => __DIR__ . '/../..' . '/includes/Base/CF_Controller.php',
         'Merryll\\Merryll_Consent_Manager\\Base\\CPT_Controller' => __DIR__ . '/../..' . '/includes/Base/CPT_Controller.php',
-        'Merryll\\Merryll_Consent_Manager\\Base\\Carbon_Fields_Controller' => __DIR__ . '/../..' . '/includes/Base/Carbon_Fields_Controller.php',
         'Merryll\\Merryll_Consent_Manager\\Base\\Deactivate' => __DIR__ . '/../..' . '/includes/Base/Deactivate.php',
+        'Merryll\\Merryll_Consent_Manager\\Base\\Enqueue' => __DIR__ . '/../..' . '/includes/Base/Enqueue.php',
         'Merryll\\Merryll_Consent_Manager\\Base\\Locale' => __DIR__ . '/../..' . '/includes/Base/Locale.php',
         'Merryll\\Merryll_Consent_Manager\\Base\\Metabox_Controller' => __DIR__ . '/../..' . '/includes/Base/Metabox_Controller.php',
         'Merryll\\Merryll_Consent_Manager\\Base\\Public_Controller' => __DIR__ . '/../..' . '/includes/Base/Public_Controller.php',
-        'Merryll\\Merryll_Consent_Manager\\Base\\Settings_Link' => __DIR__ . '/../..' . '/includes/Base/Settings_Link.php',
+        'Merryll\\Merryll_Consent_Manager\\Base\\Settings_Links' => __DIR__ . '/../..' . '/includes/Base/Settings_Links.php',
+        'Merryll\\Merryll_Consent_Manager\\Frontend\\Localize' => __DIR__ . '/../..' . '/includes/Frontend/Localize.php',
+        'Merryll\\Merryll_Consent_Manager\\Frontend\\Public_Enqueue' => __DIR__ . '/../..' . '/includes/Frontend/Public_Enqueue.php',
+        'Merryll\\Merryll_Consent_Manager\\Lib\\Custom_Post_Type' => __DIR__ . '/../..' . '/includes/Lib/Custom_Post_Type.php',
         'Merryll\\Merryll_Consent_Manager\\Plugin' => __DIR__ . '/../..' . '/includes/Plugin.php',
     );
 

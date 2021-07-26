@@ -19,8 +19,13 @@
 		"source": "https://github.com/wp-sigmadevs/merryll-consent-manager"
 	},
 	"autoload": {
+		"files": [
+			"./vendor/extensions/carbon-field-switch/field.php",
+			"./vendor/htmlburger/carbon-fields/core/functions.php"
+		],
 		"psr-4": {
-			"Merryll\\Merryll_Consent_Manager\\": "./includes"
+			"Merryll\\Merryll_Consent_Manager\\": "./includes",
+			"Carbon_Field_Switch\\": "./vendor/extensions/carbon-field-switch/core/"
 		}
 	}
 }

@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Carbon_Field_Switch\\Switch_Field' => $vendorDir . '/extensions/carbon-field-switch/core/Switch_Field.php',
     'Carbon_Fields\\Block' => $vendorDir . '/htmlburger/carbon-fields/core/Block.php',
     'Carbon_Fields\\Carbon_Fields' => $vendorDir . '/htmlburger/carbon-fields/core/Carbon_Fields.php',
     'Carbon_Fields\\Container' => $vendorDir . '/htmlburger/carbon-fields/core/Container.php',
@@ -130,15 +131,21 @@ return array(
     'Carbon_Fields\\Widget' => $vendorDir . '/htmlburger/carbon-fields/core/Widget.php',
     'Carbon_Fields\\Widget\\Widget' => $vendorDir . '/htmlburger/carbon-fields/core/Widget/Widget.php',
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
+    'Merryll\\Merryll_Consent_Manager\\Admin\\Admin_Enqueue' => $baseDir . '/includes/Admin/Admin_Enqueue.php',
+    'Merryll\\Merryll_Consent_Manager\\Admin\\Admin_Pages' => $baseDir . '/includes/Admin/Admin_Pages.php',
     'Merryll\\Merryll_Consent_Manager\\Base\\Activate' => $baseDir . '/includes/Base/Activate.php',
     'Merryll\\Merryll_Consent_Manager\\Base\\Admin_Controller' => $baseDir . '/includes/Base/Admin_Controller.php',
     'Merryll\\Merryll_Consent_Manager\\Base\\Base_Controller' => $baseDir . '/includes/Base/Base_Controller.php',
+    'Merryll\\Merryll_Consent_Manager\\Base\\CF_Controller' => $baseDir . '/includes/Base/CF_Controller.php',
     'Merryll\\Merryll_Consent_Manager\\Base\\CPT_Controller' => $baseDir . '/includes/Base/CPT_Controller.php',
-    'Merryll\\Merryll_Consent_Manager\\Base\\Carbon_Fields_Controller' => $baseDir . '/includes/Base/Carbon_Fields_Controller.php',
     'Merryll\\Merryll_Consent_Manager\\Base\\Deactivate' => $baseDir . '/includes/Base/Deactivate.php',
+    'Merryll\\Merryll_Consent_Manager\\Base\\Enqueue' => $baseDir . '/includes/Base/Enqueue.php',
     'Merryll\\Merryll_Consent_Manager\\Base\\Locale' => $baseDir . '/includes/Base/Locale.php',
     'Merryll\\Merryll_Consent_Manager\\Base\\Metabox_Controller' => $baseDir . '/includes/Base/Metabox_Controller.php',
     'Merryll\\Merryll_Consent_Manager\\Base\\Public_Controller' => $baseDir . '/includes/Base/Public_Controller.php',
-    'Merryll\\Merryll_Consent_Manager\\Base\\Settings_Link' => $baseDir . '/includes/Base/Settings_Link.php',
+    'Merryll\\Merryll_Consent_Manager\\Base\\Settings_Links' => $baseDir . '/includes/Base/Settings_Links.php',
+    'Merryll\\Merryll_Consent_Manager\\Frontend\\Localize' => $baseDir . '/includes/Frontend/Localize.php',
+    'Merryll\\Merryll_Consent_Manager\\Frontend\\Public_Enqueue' => $baseDir . '/includes/Frontend/Public_Enqueue.php',
+    'Merryll\\Merryll_Consent_Manager\\Lib\\Custom_Post_Type' => $baseDir . '/includes/Lib/Custom_Post_Type.php',
     'Merryll\\Merryll_Consent_Manager\\Plugin' => $baseDir . '/includes/Plugin.php',
 );

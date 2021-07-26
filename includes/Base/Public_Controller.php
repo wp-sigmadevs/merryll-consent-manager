@@ -33,7 +33,7 @@ class Public_Controller extends Base_Controller {
 	private static function get_services() {
 		return array(
 			// Shortcodes::class,
-			// PublicEnqueue::class,
+			Public_Enqueue::class,
 		);
 	}
 
@@ -48,6 +48,10 @@ class Public_Controller extends Base_Controller {
 	 * @return void
 	 */
 	public function register() {
+		if ( is_admin() ) {
+			return;
+		}
+
 		foreach ( self::get_services() as $class ) {
 			$service = Base_Controller::instance( $class );
 			if ( method_exists( $service, 'register' ) ) {
