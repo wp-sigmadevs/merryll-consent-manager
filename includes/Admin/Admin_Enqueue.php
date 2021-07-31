@@ -34,7 +34,12 @@ class Admin_Enqueue extends Enqueue {
 			return;
 		}
 
+		if ( ! is_admin() ) {
+			return;
+		}
+
 		\add_action( 'admin_enqueue_scripts', array( $this, 'enqueue' ) );
+		\add_action( 'admin_head', array( $this, 'merryll_icon' ) );
 	}
 
 	/**
@@ -109,9 +114,43 @@ class Admin_Enqueue extends Enqueue {
 	 */
 	public function enqueue( $hook ) {
 		$screen         = \get_current_screen();
+		// echo '<pre>';
+		// print_r( $screen );
+		// echo '</pre>';
 		$post_type_name = 'merryll_cookies';
 		if ( $post_type_name === $screen->post_type ) {
 			$this->register_scripts()->enqueue_scripts();
 		}
+	}
+
+	/**
+	 * Custom menu icon.
+	 *
+	 * @since  1.0.0
+	 * @access public
+	 *
+	 * @return void
+	 */
+	public function merryll_icon() {
+		echo '
+		<style>
+			.dashicons-merryll-manager {
+				background-image: url("' . esc_url( $this->get_plugin_url() ) . '/assets/images/merryll-icon.png");
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: 20px;
+			}
+
+			#adminmenu .current .dashicons-merryll-manager,
+			#adminmenu .wp-has-current-submenu .dashicons-merryll-manager {
+				-webkit-filter: contrast(2);
+				filter: contrast(2);
+			}
+		</style>
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+				document.querySelector("#menu-posts-merryll_cookies > a").setAttribute("href", "edit.php?post_type=merryll_cookies&page=merryll_manager_dashboard");
+			});
+		</script>';
 	}
 }

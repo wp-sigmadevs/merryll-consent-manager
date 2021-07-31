@@ -31,7 +31,7 @@ final class Plugin {
 		return array(
 			Base\Locale::class,
 			Base\CF_Controller::class,
-			Base\CPT_Controller::class,
+			// Base\CPT_Controller::class,
 			Base\Settings_Links::class,
 			Base\Admin_Controller::class,
 			Base\Public_Controller::class,

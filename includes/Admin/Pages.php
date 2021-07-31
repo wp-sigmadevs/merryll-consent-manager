@@ -13,15 +13,22 @@ namespace Merryll\Merryll_Consent_Manager\Admin;
 
 use Carbon_Fields\Container;
 // use AuroraSlider\Admin\Aside;
-use Merryll\Merryll_Consent_Manager\Admin\Tabs\Colors;
-use Merryll\Merryll_Consent_Manager\Admin\Tabs\Settings;
+use Merryll\Merryll_Consent_Manager\Admin\Groups;
+use Merryll\Merryll_Consent_Manager\Admin\Tabs\Bar;
+use Merryll\Merryll_Consent_Manager\Admin\Dashboard;
+use Merryll\Merryll_Consent_Manager\Admin\Tabs\Texts;
+use Merryll\Merryll_Consent_Manager\Admin\Tabs\General;
+use Merryll\Merryll_Consent_Manager\Admin\Tabs\Buttons;
+use Merryll\Merryll_Consent_Manager\Admin\Tabs\Privacy;
+use Merryll\Merryll_Consent_Manager\Base\Base_Controller;
+use Merryll\Merryll_Consent_Manager\Admin\Tabs\Appearance;
 
 /**
  * Admin Pages Class.
  *
  * @since  1.0.0
  */
-class Admin_Pages {
+class Pages extends Base_Controller {
 
 	/**
 	 * Admin Page args.
@@ -45,13 +52,20 @@ class Admin_Pages {
 		$this->args = array(
 			array(
 				'title'       => esc_html__( 'Cookie Groups', 'merryll-consent-manager' ),
-				'parent-page' => esc_url( 'edit.php?post_type=merryll_cookies' ),
+				'parent-page' => 'admin.php?page=merryll_cookie',
 				'page-slug'   => esc_attr( 'merryll-cookie-groups' ),
 			),
 
 			array(
+				'title'       => esc_html__( 'Cookie Box', 'merryll-consent-manager' ),
+				'parent-page' => 'admin.php?page=merryll_cookie',
+				'page-slug'   => esc_attr( 'merryll-cookie-box' ),
+				'tabs'        => 'yes',
+			),
+
+			array(
 				'title'       => esc_html__( 'Settings', 'merryll-consent-manager' ),
-				'parent-page' => esc_url( 'edit.php?post_type=merryll_cookies' ),
+				'parent-page' => 'admin.php?page=merryll_cookie',
 				'page-slug'   => esc_attr( 'merryll-manager-settings' ),
 			),
 		);
@@ -70,15 +84,33 @@ class Admin_Pages {
 	 * @return void
 	 */
 	public function add_dashboard_menu() {
-		add_submenu_page(
-			'edit.php?post_type=merryll_cookies',
-			esc_html__( 'Dashboard', 'merryll_consent_manager' ),
-			esc_html__( 'Dashboard', 'merryll_consent_manager' ),
+		// add_submenu_page(
+		// 	'edit.php?post_type=merryll_cookies',
+		// 	esc_html__( 'Dashboard', 'merryll_consent_manager' ),
+		// 	esc_html__( 'Dashboard', 'merryll_consent_manager' ),
+		// 	'manage_options',
+		// 	'merryll_manager_dashboard',
+		// 	array( $this, 'create_dashboard' ),
+		// 	0
+		// );
+		add_menu_page(
+			esc_html__( 'Dashboard', 'merryll-consent-manager' ),
+			esc_html__( 'merryll Cookie', 'merryll-consent-manager' ),
 			'manage_options',
-			'merryll_manager_dashboard',
+			'merryll_cookie',
 			array( $this, 'create_dashboard' ),
-			0
+			$this->get_plugin_url() . '/assets/images/merryll-icon.png',
+			40
 		);
+
+		// add_submenu_page(
+		// 	'merryll_cookie',
+		// 	esc_html__( 'new', 'merryll_consent_manager' ),
+		// 	esc_html__( 'new', 'merryll_consent_manager' ),
+		// 	'manage_options',
+		// 	'merryll-cookie-groups',
+		// 	array( $this, 'create_dashboard' ),
+		// );
 	}
 
 	/**
@@ -90,11 +122,7 @@ class Admin_Pages {
 	 * @return void
 	 */
 	public function create_dashboard() {
-		?>
-		<div id="merryll-dashboard" class="wrap">
-			<h1>Welcome to merryll Consent Manager</h1>
-		</div>
-		<?php
+		$this->instance( Dashboard::class )->register();
 	}
 
 	/**
@@ -105,13 +133,32 @@ class Admin_Pages {
 	 *
 	 * @return mixed
 	 */
-	private function tabs() {
+	private function settings_tabs() {
 		$tabs = array(
-			esc_html__( 'Settings', 'merryll-consent-manager' ) => Settings::class,
-			esc_html__( 'Colors', 'merryll-consent-manager' )   => Colors::class,
+			esc_html__( 'General', 'merryll-consent-manager' ) => General::class,
+			esc_html__( 'Floating Bar', 'merryll-consent-manager' ) => Bar::class,
+			esc_html__( 'Privacy Policy', 'merryll-consent-manager' ) => Privacy::class,
 		);
 
 		return \apply_filters( 'merryll_manager_settings_tabs', $tabs );
+	}
+
+	/**
+	 * Method to render cookie box page tab contents.
+	 *
+	 * @since  1.0.0
+	 * @access private
+	 *
+	 * @return mixed
+	 */
+	private function cookie_box_tabs() {
+		$tabs = array(
+			esc_html__( 'Texts', 'merryll-consent-manager' )   => Texts::class,
+			esc_html__( 'Appearance', 'merryll-consent-manager' )  => Appearance::class,
+			esc_html__( 'Buttons', 'merryll-consent-manager' ) => Buttons::class,
+		);
+
+		return \apply_filters( 'merryll_manager_cookie_box_tabs', $tabs );
 	}
 
 	/**
@@ -140,15 +187,26 @@ class Admin_Pages {
 	 */
 	private function pages() {
 		foreach ( $this->args as $admin_page ) {
+			echo $admin_page['parent-page'];
 			$page = Container::make( 'theme_options', $admin_page['title'] );
 			$page->set_page_parent( $admin_page['parent-page'] )
 				->set_page_file( $admin_page['page-slug'] )
 				->set_classes( $admin_page['page-slug'] . '-page' );
 
 			if ( 'merryll-manager-settings' === $admin_page['page-slug'] ) {
-				foreach ( $this->tabs() as $tab_name => $tab_content ) {
+				foreach ( $this->settings_tabs() as $tab_name => $tab_content ) {
 					$page->add_tab( $tab_name, $tab_content::register() );
 				}
+			}
+
+			if ( 'merryll-cookie-box' === $admin_page['page-slug'] ) {
+				foreach ( $this->cookie_box_tabs() as $tab_name => $tab_content ) {
+					$page->add_tab( $tab_name, $tab_content::register() );
+				}
+			}
+
+			if ( 'merryll-cookie-groups' === $admin_page['page-slug'] ) {
+				$page->add_fields( Groups::register() );
 			}
 		}
 

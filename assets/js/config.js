@@ -1,118 +1,203 @@
-var rhKlaroSettings = {
-    acceptAll: "1",
-    mustConsent: "1",
-    privacyPolicy: "https://stroeer-online-marketing.de/datenschutzerklaerung/",
-    services: [
-        { name: "stroeer-kampagnen-tracking", title: "Str\u00f6er Kampagnen Tracking", cookies: ["campaignId"], default: true, onlyOnce: true, optOut: false, purposes: ["analytics"], required: false },
-        { name: "google-ads-conversion", title: "Google Ads Conversion", cookies: ["_gac", "_gac_*", "_gcl", "_gcl_au", "_gcl_*"], default: false, onlyOnce: true, optOut: false, purposes: ["analytics"], required: false },
-        { name: "google-remarketing-pixel", title: "Google Remarketing Pixel", cookies: [""], default: false, onlyOnce: true, optOut: false, purposes: ["ads"], required: false },
-        { name: "facebook-remarketing-pixel", title: "Facebook Remarketing Pixel", cookies: [""], default: false, onlyOnce: true, optOut: false, purposes: ["ads"], required: false },
-        { name: "google-analytics", title: "Google Analytics", cookies: ["_ga", "_gid", "_gat", "__gads", "/^_gac_", ".*$/i", "/^_gat_", ".*$/i"], default: false, onlyOnce: true, optOut: false, purposes: ["analytics"], required: false },
-    ],
-    translations: {
-        default: {
-            acceptAll: "Alle akzeptieren",
-            acceptSelected: "Ausgew\u00e4hlte akzeptieren",
-            app: {
-                disableAll: { description: "Benutzen Sie diesen Schalter, um alle Anwendungen zu aktivieren/deaktivieren.", title: "Alle Anwendungen" },
-                optOut: { description: "Diese Anwendung wird standardm\u00e4\u00dfig geladen (aber Sie k\u00f6nnen sich davon abmelden).", title: "(Opt-out)" },
-                purpose: "Zweck",
-                required: { description: "Diese Anwendung ist immer erforderlich.", title: "(erforderlich)" },
-            },
-            consentModal: {
-                description:
-                    "Wir verwenden f\u00fcr den Betrieb notwendige Cookies. Mit Ihrer Einwilligung kommen zus\u00e4tzliche Tracking-Technologien (Cookies, Tags, Pixel etc.) zum Einsatz, die Daten zur Optimierung, Personalisierung, Lokalisierung und Analyse unseres Angebots sowie f\u00fcr Werbung erheben und an den jeweiligen Anbieter weitergegeben und dort zusammengef\u00fchrt werden k\u00f6nnen.",
-                title: "Diese Internetseite verwendet Cookies und Tracking",
-            },
-            decline: "Ablehnen",
-            poweredBy: "Angetrieben von Klaro",
-            privacyPolicy: { name: "Datenschutzerkl\u00e4rung", text: "Informationen dazu finden Sie in unserer {privacyPolicy}." },
-            purposeItem: { service: "Dienst", services: "Dienste" },
-            purposes: {
-                ads: { description: "Wir benutzen Dienste von Drittanbietern, die Daten sammeln, um personalisierte Werbung anzuzeigen, die Ihren Bed\u00fcrfnissen am besten entsprechen.", title: "Werbung" },
-                analytics: { description: "Wir benutzen Dienste Dritter, die personenbezogene Daten sammeln, um uns bei der Verbesserung unserer Dienste zu unterst\u00fctzen.", title: "Analyse" },
-                chat: { description: "Wir benutzen Dienste von Drittanbietern, um Ihnen ein Chat-System anbieten zu k\u00f6nnen.", title: "Chat" },
-                none: { title: "Nicht verf\u00fcgbar" },
-                security: { description: "Wir benutzen Dienste von Drittanbietern, die unsere Website sch\u00fctzen.", title: "Sicherheit" },
-                styling: { description: "Wir benutzen Dienste von Drittanbietern, um verschiedene Gestaltungselemente auf unserer Website hinzuzuf\u00fcgen.", title: "Gestaltung" },
-                title: "Zwecke",
-            },
-            save: "Speichern",
-            service: {
-                disableAll: {
-                    description:
-                        "Durch das Deaktivieren aller Dienste werden wir keine personenbezogenen Daten sammeln, benutzen oder \u00fcbertragen, bis Sie uns Ihre explizite Einwilligung erteilen. Allerdings verhindert das, dass wir Ihnen die bestm\u00f6gliche Erfahrung auf unserer Website geben k\u00f6nnen.",
-                    title: "Alle deaktivieren",
-                },
-                purpose: "Zweck",
-            },
-            "stroeer-kampagnen-tracking": { description: "Cookie von Str\u00f6er Online Marketing zur Website-Analyse und Werbewirksamkeitsermittlung. Erzeugt statistische Daten dar\u00fcber, wie der Besucher die Website nutzt." },
-            "google-ads-conversion": { description: "Erhebung von Besucherinteraktionen" },
-            "google-remarketing-pixel": { description: "Domain\u00fcbergreifende personalisierte Werbung" },
-            "facebook-remarketing-pixel": { description: "Domain\u00fcbergreifende personalisierte Werbung" },
-            "google-analytics": { description: "Erhebung von Besucherstatistiken" },
-        },
-    },
-};
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		}
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// create a fake namespace object
+/******/ 	// mode & 1: value is a module id, require it
+/******/ 	// mode & 2: merge all properties of value into the ns
+/******/ 	// mode & 4: return value when already ns object
+/******/ 	// mode & 8|1: behave like require
+/******/ 	__webpack_require__.t = function(value, mode) {
+/******/ 		if(mode & 1) value = __webpack_require__(value);
+/******/ 		if(mode & 8) return value;
+/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
+/******/ 		var ns = Object.create(null);
+/******/ 		__webpack_require__.r(ns);
+/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
+/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
+/******/ 		return ns;
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-var klaroConfig = {
-    acceptAll: rhKlaroSettings.acceptAll,
-    services: rhKlaroSettings.services,
-    cookieName: "consentManager",
-    cookieExpiresAfterDays: 90,
-    default: true,
-    elementID: "consentManager",
-    lang: "default",
-    noticeAsModal: true,
-    // mustConsent: rhKlaroSettings.mustConsent,
-    mustConsent: rhKlaroSettings.mustConsent,
-    privacyPolicy: rhKlaroSettings.privacyPolicy,
-    callback: function (consent, service) {
-        // console.log('User consent for service ' + service.name + ': consent=' + consent);
-        console.log(klaroConfig);
-        // loadConsents();
-    },
-    translations: rhKlaroSettings.translations,
-};
-document.addEventListener("DOMContentLoaded", function () {
-    const checkExist = new MutationObserver(function (mutations, me) {
-        console.log(mutations);
-        const klaro = document.querySelector(".klaro");
-        if (!klaro) {
-            return;
-        }
-        klaro.removeAttribute("lang");
-        setBodyPadding(klaro.querySelector(".cm-modal"));
-        if (isHigherThanScreen()) {
-            klaro.classList.add("is-higher");
-        }
-        checkExist.disconnect();
-    });
-    checkExist.observe(document, { childList: true, subtree: true });
-});
-window.addEventListener("resize", function () {
-    setBodyPadding(document.querySelector(".klaro .cm-modal"));
-    if (isHigherThanScreen()) {
-        document.querySelector(".klaro").classList.add("is-higher");
-    } else {
-        document.querySelector(".klaro").classList.remove("is-higher");
+"use strict";
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// CONCATENATED MODULE: ./src/js/frontend/MerryllConfig.js
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+var MerryllConfig = /*#__PURE__*/function () {
+  function MerryllConfig() {
+    _classCallCheck(this, MerryllConfig);
+
+    this.config();
+  }
+
+  _createClass(MerryllConfig, [{
+    key: "config",
+    value: function config() {
+      var klaroConfig = {
+        version: 1,
+        elementID: merryllSettings.elementID,
+        noAutoLoad: false,
+        htmlTexts: true,
+        embedded: false,
+        groupByPurpose: true,
+        storageMethod: 'cookie',
+        cookieName: merryllSettings.elementID,
+        cookieExpiresAfterDays: merryllSettings.cookieExpires,
+        "default": true,
+        mustConsent: false,
+        acceptAll: true,
+        hideDeclineAll: false,
+        noticeAsModal: false,
+        additionalClass: 'merryll-modal',
+        services: rhKlaroSettings.services,
+        lang: "default",
+        privacyPolicy: merryllSettings.privacyPolicyLink,
+        translations: rhKlaroSettings.translations
+      };
     }
-});
-function isHigherThanScreen() {
-    const modal = document.querySelector(".klaro .cm-modal");
-    if (!modal) {
-        return false;
+  }]);
+
+  return MerryllConfig;
+}();
+
+/* harmony default export */ var frontend_MerryllConfig = (MerryllConfig);
+// CONCATENATED MODULE: ./src/js/frontend/Helpers.js
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function Helpers_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function Helpers_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function Helpers_createClass(Constructor, protoProps, staticProps) { if (protoProps) Helpers_defineProperties(Constructor.prototype, protoProps); if (staticProps) Helpers_defineProperties(Constructor, staticProps); return Constructor; }
+
+var MerryllHelpers = /*#__PURE__*/function () {
+  function MerryllHelpers() {
+    Helpers_classCallCheck(this, MerryllHelpers);
+  }
+
+  Helpers_createClass(MerryllHelpers, null, [{
+    key: "ready",
+    value: function ready(fn) {
+      if (document.readyState !== 'loading') {
+        fn();
+      } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', fn);
+      } else {
+        document.attachEvent('onreadystatechange', function () {
+          if (document.readyState !== 'loading') {
+            fn();
+          }
+        });
+      }
     }
-    return window.innerHeight - 40 <= modal.offsetHeight;
-}
-function setBodyPadding(modal) {
-    if (modal === null || typeof modal === "undefined") {
-        return;
+  }, {
+    key: "toArray",
+    value: function toArray(nodelist) {
+      return !nodelist.length || _typeof(nodelist) !== 'object' ? nodelist : [].slice.call(nodelist);
     }
-    if (window.matchMedia("(min-width: 680px)").matches) {
-        document.body.style.removeProperty("padding-bottom");
-        return;
+  }, {
+    key: "isEmptyObj",
+    value: function isEmptyObj(obj) {
+      return Object.keys(obj).length === 0 && obj.constructor === Object;
     }
-    document.body.style.removeProperty("padding-bottom");
-    document.body.style.paddingBottom = modal.offsetHeight + "px";
-}
+  }]);
+
+  return MerryllHelpers;
+}();
+
+/* harmony default export */ var Helpers = (MerryllHelpers);
+// CONCATENATED MODULE: ./src/js/config.js
+
+
+var merryllConsent = {};
+merryllConsent = {
+  run: function run() {
+    new frontend_MerryllConfig();
+  }
+}; // MerryllHelpers.ready(merryllConsent.run());
+// jQuery(document).ready(function($) {
+// 	$(document).on('carbonFields.apiLoaded', function(e, api) {
+// 		// Get the current value in the 'crb_text' field
+// 		var value = api.getFieldValue('merryll_cookie_name');
+// 		console.log('value:', value);
+// 	});
+// });
+
+/***/ })
+/******/ ]);

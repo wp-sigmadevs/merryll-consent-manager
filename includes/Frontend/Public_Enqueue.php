@@ -20,6 +20,8 @@ use Merryll\Merryll_Consent_Manager\Frontend\localize;
  */
 class Public_Enqueue extends Enqueue {
 
+	public $values;
+
 	/**
 	 * Method to register frontend scripts.
 	 *
@@ -29,6 +31,10 @@ class Public_Enqueue extends Enqueue {
 	 * @return void
 	 */
 	public function register() {
+		if ( ! \get_option( '_merryll_enable_cookie' ) ) {
+			return;
+		}
+
 		$this->scripts_list();
 
 		if ( empty( $this->scripts_list() ) ) {
@@ -145,7 +151,7 @@ class Public_Enqueue extends Enqueue {
 	 * @return void
 	 */
 	public function enqueue() {
-		$this->register_scripts()->enqueue_scripts()->localize( Localize::register() );
+		$this->register_scripts()->enqueue_scripts()->localize( Localize::register($this->values) );
 	}
 
 	/**

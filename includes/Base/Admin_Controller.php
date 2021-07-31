@@ -10,7 +10,7 @@
 
 namespace Merryll\Merryll_Consent_Manager\Base;
 
-use Merryll\Merryll_Consent_Manager\Admin\Admin_Pages;
+use Merryll\Merryll_Consent_Manager\Admin\Pages;
 use Merryll\Merryll_Consent_Manager\Admin\Admin_Enqueue;
 use Merryll\Merryll_Consent_Manager\Base\Base_Controller;
 
@@ -32,7 +32,7 @@ class Admin_Controller extends Base_Controller {
 	 */
 	private static function get_services() {
 		return array(
-			Admin_Pages::class,
+			Pages::class,
 			Admin_Enqueue::class,
 		);
 	}
@@ -48,10 +48,6 @@ class Admin_Controller extends Base_Controller {
 	 * @return void
 	 */
 	public function register() {
-		if ( ! is_admin() ) {
-			return;
-		}
-
 		foreach ( self::get_services() as $class ) {
 			$service = Base_Controller::instance( $class );
 			if ( method_exists( $service, 'register' ) ) {

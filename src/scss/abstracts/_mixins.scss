@@ -1,0 +1,32 @@
+// media css
+@mixin respond-to($media) {
+	@if $media == small-mobile {
+		@media only screen and (max-width: $merryll-vsm-screen - 1) {
+			@content;
+		}
+	} @else if $media == mobile {
+		@media only screen and (max-width: $merryll-sm-screen - 1) {
+			@content;
+		}
+	} @else if $media == large-mobile {
+		@media only screen and (min-width: $merryll-vsm-screen) and (max-width: $merryll-sm-screen - 1) {
+			@content;
+		}
+	} @else if $media == tablet {
+		@media only screen and (min-width: $merryll-sm-screen) and (max-width: $merryll-md-screen - 1) {
+			@content;
+		}
+	} @else if $media == cdxnnotebook {
+		@media only screen and (min-width: $merryll-sm-screen) and (max-width: $merryll-lg-screen - 1) {
+			@content;
+		}
+	} @else if $media == notebook {
+		@media only screen and (min-width: $merryll-md-screen) and (max-width: $merryll-xlg-screen - 1) {
+			@content;
+		}
+	} @else if $media == wide {
+		@media only screen and (min-width: $merryll-xlg-screen) {
+			@content;
+		}
+	}
+}

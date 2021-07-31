@@ -1,0 +1,19 @@
+/* ===========================
+	Select Field
+==============================*/
+
+.post-type-merryll_cookies {
+	.cf-select__input {
+		height: 40px;
+		line-height: 36px;
+		color: $text_color;
+		outline: 0;
+		border-radius: 0;
+		max-width: 100%;
+
+		&:hover,
+		&:focus {
+			color: $text_color;
+		}
+	}
+}

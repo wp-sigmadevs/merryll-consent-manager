@@ -31,7 +31,7 @@ class Metabox_Controller extends Base_Controller {
 	 */
 	private static function get_services() {
 		return array(
-			// Metaboxes::class,
+			Metaboxes::class,
 		);
 	}
 

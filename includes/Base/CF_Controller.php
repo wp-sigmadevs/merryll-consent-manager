@@ -30,7 +30,7 @@ class CF_Controller {
 			return;
 		}
 
-		\add_action( 'after_setup_theme', array( $this, 'boot' ), 99 );
+		\add_action( 'after_setup_theme', array( $this, 'boot' ) );
 	}
 
 	/**

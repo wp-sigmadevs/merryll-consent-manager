@@ -57,7 +57,7 @@ class Settings_Links extends Base_Controller {
 	 * @return array modified links.
 	 */
 	public function settings_link( $links ) {
-		array_push( $links, $this->custom_settings_link );
+		array_unshift( $links, $this->custom_settings_link );
 
 		return $links;
 	}

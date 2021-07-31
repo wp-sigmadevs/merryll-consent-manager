@@ -10,6 +10,8 @@
 
 namespace Merryll\Merryll_Consent_Manager\Frontend;
 
+use Merryll\Merryll_Consent_Manager\Frontend\Options_Values as Options;
+
 /**
  * Localize Class.
  *
@@ -44,10 +46,6 @@ class Localize {
 	 * @return array
 	 */
 	private static function data() {
-		return array(
-			'ajax_url' => \admin_url( 'admin-ajax.php' ),
-			'nonce'    => \wp_create_nonce( 'add_something' ),
-			'user_id'  => \get_current_user_id(),
-		);
+		return Options::get();
 	}
 }

@@ -105,21 +105,16 @@ function merryll_fail_wp_version() {
 	echo wp_kses_post( $html_message );
 }
 
-add_action( 'admin_head', 'my_custom_favicon' );
-function my_custom_favicon() {
-	echo '
-    <style>
-    .dashicons-merryll-manager {
-        background-image: url("' . plugins_url() . '/merryll-consent-manager/assets/images/merryll-icon.png");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 20px;
-    }
 
-	#adminmenu .current .dashicons-merryll-manager,
-	#adminmenu .wp-has-current-submenu .dashicons-merryll-manager {
-        -webkit-filter: contrast(2);
-        filter: contrast(2);
-	}
-    </style>
-'; }
+
+
+// $string = "n9whWg%#&4%Z6YjbpF%E";
+// $md5 = md5($string);
+// echo $string;
+// echo "<br>";
+// // echo "Hex formed by md5 function is ".$md5;
+// $json = json_decode(\file_get_contents($this->get_plugin_path() . '/md5.json'), true);
+
+// if($md5 === $json['md5']) {
+// 	echo '<br>success';
+// }

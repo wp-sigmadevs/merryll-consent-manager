@@ -28,5 +28,22 @@ class Activate {
 	 */
 	public static function activate() {
 		\flush_rewrite_rules();
+
+		if ( ! \get_option( '_aurora_cookie_name' ) ) {
+			\update_option( '_aurora_cookie_name', 'Klaro' );
+		}
+
+		if ( ! \get_option( '_merryll_cookie_group|merryll_cookie_group_title|2|0|value' ) ) {
+			\update_option( '_merryll_cookie_group|merryll_cookie_group_title|2|0|value', 'Kklaro' );
+		}
+
+		if ( ! \get_option( '_merryll_cookie_group|merryll_cookie_group_id|2|0|value' ) ) {
+			\update_option( '_merryll_cookie_group|merryll_cookie_group_id|2|0|value', 'klaro' );
+		}
+
+		if ( ! \get_option( '_merryll_cookie_group|merryll_cookie_group_desc|2|0|value' ) ) {
+			\update_option( '_merryll_cookie_group|merryll_cookie_group_desc|2|0|value', 'This is from database.' );
+		}
+
 	}
 }

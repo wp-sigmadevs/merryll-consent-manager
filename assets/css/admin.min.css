@@ -1,0 +1,69 @@
+:root{--merryll-admin-color:#0073aa;--merryll-admin-hover-color:#135e96;--merryll-admin-offset-color:#edf1fa}
+.cf-field[hidden]{display:none !important}
+.d-flex{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap}
+.two-col{-webkit-box-align:center;-ms-flex-align:center;align-items:center}
+.flex-wrap{-ms-flex-wrap:wrap;flex-wrap:wrap}
+.justify-content-end{-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end}
+.align-items-start{-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start}
+.justify-content-start{-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start}
+.postbox-header{z-index:9;position:relative}
+.post-type-merryll_cookies .cf-complex .cf-complex__actions button,.post-type-merryll_cookies .cf-textarea textarea,.post-type-merryll_cookies .cf-container .cf-field.two-col:not(.cf-switch) input[type=text],.post-type-merryll_cookies .cf-container .cf-field.two-col:not(.cf-switch) input[type=number]{-webkit-transition:all .3s;-o-transition:all .3s;transition:all .3s}
+#merryll-dashboard .header-banner,.post-type-merryll_cookies .cf-container .cf-field.two-col.cf-switch .cf-switch-wrapper,.two-col{display:-webkit-box;display:-ms-flexbox;display:flex}
+.post-type-merryll_cookies .cf-container__fields{margin:0}
+.post-type-merryll_cookies .cf-container .cf-field{margin-bottom:12px}
+.post-type-merryll_cookies .cf-container .cf-field.two-col:not(.cf-switch){padding:30px;border-right:0;margin:0}
+.post-type-merryll_cookies .cf-container .cf-field.two-col:not(.cf-switch) .cf-field__head{-webkit-box-flex:0;-ms-flex:0 0 40%;flex:0 0 40%;max-width:40%}
+.post-type-merryll_cookies .cf-container .cf-field.two-col:not(.cf-switch) .cf-field__body,.post-type-merryll_cookies .cf-container .cf-field.two-col:not(.cf-switch) .cf-field__help{-webkit-box-flex:0;-ms-flex:0 0 60%;flex:0 0 60%;max-width:60%}
+.post-type-merryll_cookies .cf-container .cf-field.two-col:not(.cf-switch) .cf-field__head .cf-field__label{text-align:left;font-size:14px;padding:0;padding-right:15px}
+.post-type-merryll_cookies .cf-container .cf-field.two-col:not(.cf-switch) input[type=text],.post-type-merryll_cookies .cf-container .cf-field.two-col:not(.cf-switch) input[type=number]{height:40px}
+.post-type-merryll_cookies .cf-container .cf-field.two-col.no-top-border{border-top:0}
+.post-type-merryll_cookies .cf-container .cf-field.two-col.cf-switch{padding:30px;border-right:0;margin:0}
+.post-type-merryll_cookies .cf-container .cf-field.two-col.cf-switch .cf-field__help{-webkit-box-flex:0;-ms-flex:0 0 60%;flex:0 0 60%;max-width:60%}
+.post-type-merryll_cookies .cf-container .cf-field.two-col.cf-switch .cf-switch-wrapper{-webkit-box-align:center;-ms-flex-align:center;align-items:center}
+.post-type-merryll_cookies .cf-container .cf-field.two-col.cf-switch .cf-switch-wrapper .cf-field__label{-webkit-box-flex:0;-ms-flex:0 0 40%;flex:0 0 40%;max-width:40%;padding-bottom:0;margin-bottom:0;text-align:left;font-size:14px}
+.post-type-merryll_cookies .cf-container .cf-field.two-col.cf-switch .cf-switch-wrapper input[type=checkbox]{-webkit-box-flex:0;-ms-flex:0 0 60%;flex:0 0 60%;max-width:60%}
+.post-type-merryll_cookies .cf-container .cf-field.cf-color button.button{height:40px;padding:0 18px}
+.post-type-merryll_cookies .cf-text input[type=text],.post-type-merryll_cookies .cf-text input[type=number]{height:40px;border-radius:0;margin-left:auto;margin-right:auto}
+.post-type-merryll_cookies .cf-text input[type=text]::-webkit-inner-spin-button,.post-type-merryll_cookies .cf-text input[type=number]::-webkit-inner-spin-button{display:none}
+.post-type-merryll_cookies .cf-textarea textarea{height:150px;border-radius:0;margin-left:auto;margin-right:auto}
+.post-type-merryll_cookies .cf-textarea textarea::-webkit-inner-spin-button{display:none}
+.post-type-merryll_cookies .cf-container .cf-field__label{text-align:center;padding-bottom:12px;font-size:18px;margin-top:12px;margin-bottom:12px;display:block}
+.post-type-merryll_cookies .cf-select__input{height:40px;line-height:36px;color:#333;outline:0;border-radius:0;max-width:100%}
+.post-type-merryll_cookies .cf-select__input:hover,.post-type-merryll_cookies .cf-select__input:focus{color:#333}
+.post-type-merryll_cookies .cf-color__toggle{border-radius:0;color:#333;border-color:#333}
+.post-type-merryll_cookies .cf-color__toggle .cf-color__preview{width:40px}
+.post-type-merryll_cookies .cf-color__toggle .cf-color__preview:hover,.post-type-merryll_cookies .cf-color__toggle .cf-color__preview:focus{border-color:#333}
+.post-type-merryll_cookies .cf-color__toggle .cf-color__toggle-text{margin-left:40px}
+.post-type-merryll_cookies .cf-color__toggle:active,.post-type-merryll_cookies .cf-color__toggle:hover,.post-type-merryll_cookies .cf-color__toggle:focus{border-color:#333;color:#333}
+.post-type-merryll_cookies .cf-color__toggle:active .cf-color__preview,.post-type-merryll_cookies .cf-color__toggle:hover .cf-color__preview,.post-type-merryll_cookies .cf-color__toggle:focus .cf-color__preview{border-color:#333}
+.post-type-merryll_cookies .image-hover-color,.post-type-merryll_cookies .icon-color-selector{margin-bottom:15px !important}
+.post-type-merryll_cookies .cf-color__reset{color:#333}
+.post-type-merryll_cookies .cf-color__reset:hover,.post-type-merryll_cookies .cf-color__reset:focus{color:#333}
+.post-type-merryll_cookies .cf-separator.cf-field{border:0;margin-bottom:10px;margin-top:10px}
+.post-type-merryll_cookies .cf-separator .cf-field__head{display:none}
+.post-type-merryll_cookies .cf-separator h3{margin:0;font-size:14px;background:var(--merryll-admin-offset-color);padding:15px 20px;border:1px solid #ddd}
+.post-type-merryll_cookies .cf-complex.cf-field{border-top:0;border-right:0}
+.post-type-merryll_cookies .cf-complex .cf-complex__placeholder-label{margin-bottom:40px}
+.post-type-merryll_cookies .cf-complex .cf-complex__actions{margin-top:40px}
+.post-type-merryll_cookies .cf-complex .cf-complex__actions button{min-width:100px;height:32px;outline:0}
+.post-type-merryll_cookies .cf-complex .cf-complex__actions button.cf-complex__inserter-button{background:var(--merryll-admin-color);color:#fff}
+.post-type-merryll_cookies .cf-complex .cf-complex__actions button.cf-complex__inserter-button:hover,.post-type-merryll_cookies .cf-complex .cf-complex__actions button.cf-complex__inserter-button:focus{background:var(--merryll-admin-hover-color);-webkit-box-shadow:none;box-shadow:none}
+.post-type-merryll_cookies .cf-complex .cf-complex__group-head{border:1px solid var(--merryll-admin-offset-color);background-color:var(--merryll-admin-offset-color)}
+.post-type-merryll_cookies .cf-complex .cf-complex__group-head .cf-complex__group-index{background:var(--merryll-admin-color);color:#fff}
+.post-type-merryll_cookies .cf-complex .cf-complex__group-body{border-right:1px solid var(--merryll-admin-offset-color);margin-top:-2px}
+.post-type-merryll_cookies .cf-complex.cf-complex__group--collapsed .cf-complex__group-index{margin-bottom:-2px}
+.post-type-merryll_cookies .cf-container__tabs{padding:0;background-color:var(--merryll-admin-color);color:#fff;margin-bottom:10px;border:0}
+.post-type-merryll_cookies .cf-container__tabs .cf-container__tabs-list{margin:0}
+.post-type-merryll_cookies .cf-container__tabs .cf-container__tabs-item{margin:0;border:0;min-width:140px;font-size:14px;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;background-color:var(--merryll-admin-color);position:relative}
+.post-type-merryll_cookies .cf-container__tabs .cf-container__tabs-item:hover{background-color:var(--merryll-admin-hover-color)}
+.post-type-merryll_cookies .cf-container__tabs .cf-container__tabs-item.cf-container__tabs-item--current{background-color:var(--merryll-admin-hover-color)}
+.post-type-merryll_cookies .cf-container__tabs .cf-container__tabs-item.cf-container__tabs-item--current::after{top:100%;left:50%;border:solid transparent;content:" ";height:0;width:0;position:absolute;pointer-events:none;border-top-color:var(--merryll-admin-hover-color);border-width:10px;margin-left:-10px}
+.post-type-merryll_cookies .cf-container__tabs .cf-container__tabs-item button{color:#fff;font-weight:500;cursor:pointer;padding:17px 15px;display:block;width:100%}
+.post-type-merryll_cookies .cf-html__content{padding:10px;background:var(--merryll-admin-offset-color);border:1px solid #ddd;font-size:14px}
+#merryll-dashboard{margin-top:40px;padding-left:20px;padding-right:20px}
+#merryll-dashboard .header-banner{padding:50px;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;background-color:var(--merryll-admin-color);background-image:url(../images/banner-bg.svg);background-size:cover;background-repeat:no-repeat;background-position:bottom center}
+#merryll-dashboard .header-banner h1{color:#fff;font-size:35px;padding:0}
+#merryll-dashboard .header-banner img{max-width:200px}
+#merryll-dashboard .license-form .cf-field__label span{display:block;font-weight:400;margin-top:10px;font-style:italic;max-width:70%;font-size:13px;color:#666}
+#merryll-dashboard{margin-top:40px;padding-left:20px;padding-right:20px}
+#merryll-dashboard .license-form{background:#fff;padding:30px;margin-top:30px;border:1px solid #c3c4c7;-webkit-box-shadow:0 1px 1px rgba(0,0,0,0.04);box-shadow:0 1px 1px rgba(0,0,0,0.04)}

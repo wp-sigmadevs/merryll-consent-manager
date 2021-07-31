@@ -1,0 +1,21 @@
+/* ===========================
+	Text Field
+==============================*/
+
+.post-type-merryll_cookies {
+	.cf-text {
+		input {
+			&[type="text"],
+			&[type="number"] {
+				height: 40px;
+				border-radius: 0;
+				margin-left: auto;
+				margin-right: auto;
+
+				&::-webkit-inner-spin-button {
+					display: none;
+				}
+			}
+		}
+	}
+}

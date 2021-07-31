@@ -43,6 +43,9 @@ class CPT_Controller {
 		if ( ! empty( $this->custom_post_types ) ) {
 			$this->register_custom_post_types();
 			add_action( 'admin_menu', array( $this, 'remove_add_new' ) );
+			add_filter( 'manage_merryll_cookies_posts_custom_column', array( $this, 'admin_column' ) );
+			add_filter( 'manage_merryll_cookies_posts_columns', array( $this, 'manage_columns' ) );
+			add_filter( 'manage_merryll_cookies_posts_custom_column', array( $this, 'insert_data' ), 10, 2 );
 		}
 	}
 
@@ -110,5 +113,85 @@ class CPT_Controller {
 	 */
 	public function remove_add_new() {
 		$page = remove_submenu_page( 'edit.php?post_type=merryll_cookies', 'post-new.php?post_type=merryll_cookies' );
+	}
+
+	/**
+	 * Enabling the custom admin columns.
+	 *
+	 * @since  1.0.0
+	 * @access public
+	 *
+	 * @return array
+	 */
+	public function admin_column( $columns ) {
+		isset( $columns['cookie_id'] ) ? __( 'Cookie ID', 'merryll-consent-manager' ) : '';
+		isset( $columns['cookie_group'] ) ? __( 'Cookie Group', 'merryll-consent-manager' ) : '';
+		isset( $columns['cookie_priority'] ) ? __( 'Priority', 'merryll-consent-manager' ) : '';
+
+		return $columns;
+	}
+
+	/**
+	 * Removing & re-ordering admin columns.
+	 *
+	 * @since  1.0.0
+	 * @access public
+	 *
+	 * @param array $columns Columns array.
+	 *
+	 * @return array
+	 */
+	public function manage_columns( $columns ) {
+		$columns = array(
+			'cb'              => $columns['cb'],
+			'title'           => __( 'Title', 'merryll-consent-manager' ),
+			'cookie_id'       => __( 'Cookie ID', 'merryll-consent-manager' ),
+			'cookie_group'    => __( 'Cookie Group', 'merryll-consent-manager' ),
+			'cookie_priority' => __( 'Priority', 'merryll-consent-manager' ),
+			'date'            => __( 'Date', 'merryll-consent-manager' ),
+		);
+
+		return $columns;
+	}
+
+	/**
+	 * Inserting data in the custom columns.
+	 *
+	 * @since  1.0.0
+	 * @access public
+	 *
+	 * @param string $column Column name.
+	 * @param int    $post_id Post ID.
+	 *
+	 * @return void
+	 */
+	public function insert_data( $column, $post_id ) {
+
+		// Cookie ID.
+		if ( 'cookie_id' === $column ) {
+			echo esc_html( str_replace( ' ', '-', strtolower( get_the_title( $post_id ) ) ) );
+		}
+
+		// Cookie Group.
+		if ( 'cookie_group' === $column ) {
+			$group = carbon_get_post_meta( get_the_ID(), 'merryll_cookie_single_group' );
+
+			if ( ! $group ) {
+				echo esc_html__( 'N/A', 'merryll-consent-manager' );
+			} else {
+				echo esc_html( $group );
+			}
+		}
+
+		// Cookie Priority.
+		if ( 'cookie_priority' === $column ) {
+			$priority = carbon_get_post_meta( $post_id, 'merryll_cookie_single_position' );
+
+			if ( ! $priority ) {
+				echo esc_html__( 'N/A', 'merryll-consent-manager' );
+			} else {
+				echo esc_html( $priority );
+			}
+		}
 	}
 }

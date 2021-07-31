@@ -1,0 +1,69 @@
+{
+	"name": "merryll-consent-manager",
+	"version": "1.0.0",
+	"description": "An elegant way to make your website ready for GDPR regulations.",
+	"main": "merryll.config.js",
+	"devDependencies": {
+		"@babel/core": "^7.14.8",
+		"@babel/preset-env": "^7.14.8",
+		"babel-core": "^6.26.3",
+		"babel-loader": "^8.2.2",
+		"babel-polyfill": "^6.26.0",
+		"beepbeep": "^1.3.0",
+		"browser-sync": "^2.27.5",
+		"del": "^6.0.0",
+		"gulp": "^4.0.2",
+		"gulp-autoprefixer": "^6.1.0",
+		"gulp-babel": "^8.0.0",
+		"gulp-cache": "^1.1.3",
+		"gulp-concat": "^2.6.1",
+		"gulp-cssbeautify": "^3.0.0",
+		"gulp-filter": "^6.0.0",
+		"gulp-if": "^3.0.0",
+		"gulp-ignore": "^3.0.0",
+		"gulp-imagemin": "^4.1.0",
+		"gulp-jshint": "^2.1.0",
+		"gulp-line-ending-corrector": "^1.0.3",
+		"gulp-load-plugins": "^2.0.7",
+		"gulp-merge-media-queries": "^0.2.1",
+		"gulp-newer": "^1.4.0",
+		"gulp-notify": "^4.0.0",
+		"gulp-pixrem": "^1.0.0",
+		"gulp-plumber": "^1.2.1",
+		"gulp-remember": "^1.0.1",
+		"gulp-rename": "^2.0.0",
+		"gulp-rtlcss": "^1.4.2",
+		"gulp-run-sequence": "^0.3.2",
+		"gulp-sass": "^5.0.0",
+		"gulp-sort": "^2.0.0",
+		"gulp-sourcemaps": "^3.0.0",
+		"gulp-uglify": "^3.0.2",
+		"gulp-uglifycss": "^1.1.0",
+		"gulp-wp-pot": "^2.5.0",
+		"gulp-zip": "^4.2.0",
+		"sass": "^1.36.0",
+		"uglifyjs-webpack-plugin": "^1.1.2",
+		"webpack": "^4.39.2",
+		"webpack-stream": "^5.2.1"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"wdevelop": "webpack --config webpack.dev.js",
+		"wbuild": "webpack --config webpack.prod.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/wp-sigmadevs/merryll-consent-manager.git"
+	},
+	"keywords": [
+		"GDPR",
+		"WordPress",
+		"Plugin"
+	],
+	"author": "S.M. Rafiz",
+	"license": "GPL",
+	"bugs": {
+		"url": "https://github.com/wp-sigmadevs/merryll-consent-manager/issues"
+	},
+	"homepage": "https://github.com/wp-sigmadevs/merryll-consent-manager"
+}
