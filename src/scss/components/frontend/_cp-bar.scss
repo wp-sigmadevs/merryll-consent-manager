@@ -1,0 +1,55 @@
+/* ===========================
+	Floating Bar
+==============================*/
+
+.merryll-consent-btn {
+	> .floating-bar {
+		position: fixed;
+		right: 0;
+		top: 80%;
+		left: 102%;
+		transform: rotate(270deg);
+		transform-origin: 0 0;
+		min-width: 200px;
+		height: 40px;
+		text-align: right;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 10px;
+		font-size: 16px;
+		background: $public_consent_btn_bg;
+		cursor: pointer;
+		border-top-left-radius: 8px;
+		border-top-right-radius: 8px;
+		color: $public_consent_btn_text;
+		z-index: 99993;
+		transition: all 0.7s cubic-bezier(0.2, 1, 0.22, 1);
+		box-sizing: border-box;
+
+		p {
+			margin: 0;
+		}
+
+		&:hover {
+			background: $public_consent_btn_hover_bg;
+			color: $public_consent_btn_text_hover;
+		}
+	}
+}
+
+.merryll-modal-loaded {
+	.merryll-consent-btn {
+		> .floating-bar {
+			left: calc(100% - 40px);
+		}
+	}
+}
+
+.merryll-modal-active {
+	.merryll-consent-btn {
+		> .floating-bar {
+			left: 102%;
+		}
+	}
+}

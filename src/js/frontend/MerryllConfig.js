@@ -1,30 +1,57 @@
 class MerryllConfig {
 	constructor() {
-		this.config();
+		return this.config();
 	}
 
 	config() {
-		const klaroConfig = {
+		return {
 			version: 1,
-			elementID: merryllSettings.elementID,
+			acceptAll: true,
 			noAutoLoad: false,
 			htmlTexts: true,
 			embedded: false,
 			groupByPurpose: true,
+			disablePoweredBy: true,
 			storageMethod: 'cookie',
 			cookieName: merryllSettings.elementID,
 			cookieExpiresAfterDays: merryllSettings.cookieExpires,
 			default: true,
-			mustConsent: false,
-			acceptAll: true,
 			hideDeclineAll: false,
 			noticeAsModal: false,
-			additionalClass: 'merryll-modal',
-			services: rhKlaroSettings.services,
-			lang: "default",
+			additionalClass: merryllSettings.additionalClass,
+			services: this.serviceList(),
+			elementID: merryllSettings.elementID,
+			lang: 'default',
+			mustConsent: true,
 			privacyPolicy: merryllSettings.privacyPolicyLink,
-			translations: rhKlaroSettings.translations,
+			translations: merryllSettings.translations
 		};
+	}
+
+	serviceList() {
+		let services = [];
+		merryllSettings.services.forEach((service) => {
+			services.push({
+				name: service.name,
+				title: service.title,
+				default: service.default,
+				required: service.required,
+				description: service.description,
+				cookies: service.cookies,
+				purposes: service.purposes,
+				onlyOnce: service.onlyOnce,
+				optOut: service.optOut,
+				callback: (state, app) => {
+					if (service.customEvent) {
+						if (state !== false) {
+							dataLayer.push({ event: service.customEvent });
+						}
+					}
+				}
+			});
+		});
+
+		return services;
 	}
 }
 

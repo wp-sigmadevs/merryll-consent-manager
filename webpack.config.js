@@ -13,9 +13,9 @@ const outputDir = path.resolve(__dirname, 'assets/js');
 module.exports = {
 	entry: {
 		config: path.resolve(__dirname, './src/js/config.js'),
-		'config.min': path.resolve(__dirname, './src/js/config.js'),
-		admin: path.resolve(__dirname, './src/js/admin.js'),
-		'admin.min': path.resolve(__dirname, './src/js/admin.js')
+		'config.min': path.resolve(__dirname, './src/js/config.js')
+		// admin: path.resolve(__dirname, './src/js/admin.js'),
+		// 'admin.min': path.resolve(__dirname, './src/js/admin.js')
 	},
 	output: {
 		path: outputDir,

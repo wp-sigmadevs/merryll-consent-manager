@@ -1,0 +1,78 @@
+/* ===========================
+	Layout: Modal
+==============================*/
+
+.merryll-modal {
+	background-color: $public_modal_bg_color;
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
+	height: auto;
+	max-height: 98vh;
+	width: 100%;
+	overflow: auto;
+	padding: 20px;
+	z-index: 99992;
+	color: $public_modal_text_color;
+	box-sizing: border-box;
+	@extend %pos-r;
+
+	@include media-only(tablet) {
+		margin: 20px;
+		width: 640px;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	p {
+		color: $public_modal_text_color;
+	}
+
+	.cm-app-description,
+	.cm-caret,
+	.cm-header > p,
+	.cm-list-description,
+	.purposes {
+		font-size: 14px;
+		hyphens: auto;
+		line-height: 1.4;
+		margin-bottom: 0;
+
+		@include media-only(tablet) {
+			font-size: $public_modal_font_size;
+		}
+
+		@media only screen and (max-height: 580px) {
+			font-size: 14px;
+		}
+	}
+
+	.cm-caret {
+		margin-top: 10px;
+		margin-bottom: 20px;
+
+		> a {
+			> span {
+				vertical-align: text-bottom;
+			}
+		}
+	}
+
+	a {
+		color: $public_modal_link_color;
+		text-decoration: none;
+		transition: all 0.7s cubic-bezier(0.2, 1, 0.22, 1);
+
+		&:hover,
+		&:focus {
+			color: $public_modal_link_hover;
+			text-decoration: none;
+		}
+	}
+
+	* {
+		box-sizing: border-box;
+	}
+}

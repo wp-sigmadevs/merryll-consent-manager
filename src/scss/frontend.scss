@@ -1,6 +1,17 @@
-.frontend {
-	.mode {
-		text-align: center;
-		position: absolute;
-	}
-}
+/**
+ * Frontend specific CSS. These are compiles CSS.
+ * Please don't write custom CSS here.
+ */
+ @charset "UTF-8";
+
+ // Abstracts
+ @import "abstracts/__abstracts-dir";
+
+ // Base Styles
+ @import "base/frontend/__base-dir";
+
+ // Components
+ @import 'components/frontend/__components-dir';
+
+ // Layouts
+ @import 'layouts/frontend/__layouts-dir';

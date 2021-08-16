@@ -1,0 +1,623 @@
+# Copyright (C) 2021 merryll Consent Manager
+# This file is distributed under the same license as the merryll Consent Manager package.
+msgid ""
+msgstr ""
+"Project-Id-Version: merryll Consent Manager\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language-Team: merryll Media\n"
+"Last-Translator: merryll Media\n"
+"Report-Msgid-Bugs-To: https://merryll.de/\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. translators: %s: PHP version
+#: merryll-consent-manager.php:88
+msgid "Merryll Consent Manager requires PHP version %s+, plugin is currently NOT RUNNING."
+msgstr ""
+
+#. translators: %s: WordPress version
+#: merryll-consent-manager.php:103
+msgid "Merryll Consent Manager requires WordPress version %s+. Because you are using an earlier version, the plugin is currently NOT RUNNING."
+msgstr ""
+
+#: includes/Admin/Cookies.php:61
+msgid "Add Cookies"
+msgstr ""
+
+#: includes/Admin/Cookies.php:84
+msgid "Please enter the cookie title. Example: Google Analytics."
+msgstr ""
+
+#: includes/Admin/Cookies.php:81
+msgid "Cookie Title"
+msgstr ""
+
+#: includes/Admin/Cookies.php:92
+msgid "Please enter the cookie ID in all lowercase and with dash(-). Example: google-analytics."
+msgstr ""
+
+#: includes/Admin/Cookies.php:89
+msgid "Cookie ID"
+msgstr ""
+
+#: includes/Admin/Cookies.php:101
+msgid "Please enter the cookie description."
+msgstr ""
+
+#: includes/Admin/Cookies.php:98
+msgid "Cookie Description"
+msgstr ""
+
+#: includes/Admin/Cookies.php:109
+msgid "Please enter cookie name or regular expression (regex) or a list consisting of a name or regex separated by comma and a space. Example: for Google Analytics: _ga, _gid, _gat, __gads, /^_gac_, .*$/i, /^_gat_, .*$/i"
+msgstr ""
+
+#: includes/Admin/Cookies.php:106
+msgid "Cookie Pattern (Optional)"
+msgstr ""
+
+#: includes/Admin/Cookies.php:118
+msgid "Please select the associated cookie group."
+msgstr ""
+
+#: includes/Admin/Cookies.php:115
+msgid "Cookie Group"
+msgstr ""
+
+#: includes/Admin/Cookies.php:127
+msgid "If enabled, the cookie will be pre-selected in the frontend."
+msgstr ""
+
+#: includes/Admin/Cookies.php:124
+msgid "Pre-Selected?"
+msgstr ""
+
+#: includes/Admin/Cookies.php:136
+msgid "Please enable if this service is configured via Google Tag Manager."
+msgstr ""
+
+#: includes/Admin/Cookies.php:133
+msgid "Configured via Google Tag Manager?"
+msgstr ""
+
+#: includes/Admin/Cookies.php:145
+msgid "Please enter the custom trigger event name for google tag manager. Please note that, this event name must match with the custom trigger name in google tag manager console. Example: for Google Analytics: loadgtm-analytics"
+msgstr ""
+
+#: includes/Admin/Cookies.php:142
+msgid "Custom Trigger Event Name (In Google Tag Manager)"
+msgstr ""
+
+#: includes/Admin/Cookies.php:72, includes/Admin/Cookies.php:73
+msgid "New"
+msgstr ""
+
+#: includes/Admin/Cookies.php:194
+msgid "No Cookie Groups found. Please create Cookie Groups first."
+msgstr ""
+
+#: includes/Admin/Dashboard.php:93
+msgid "Invalid"
+msgstr ""
+
+#: includes/Admin/Dashboard.php:85, includes/Admin/Dashboard.php:100
+msgid "Valid"
+msgstr ""
+
+#: includes/Admin/Dashboard.php:107
+msgid "<b>Status: </b>merryll Cookie is enabled."
+msgstr ""
+
+#: includes/Admin/Dashboard.php:115
+msgid "Provide Your License Key"
+msgstr ""
+
+#: includes/Admin/Dashboard.php:127
+msgid "License Key"
+msgstr ""
+
+#: includes/Admin/Dashboard.php:128
+msgid "Please provide valid license key to unlock full plugin functionalities."
+msgstr ""
+
+#: includes/Admin/Groups.php:61
+msgid "Add Cookie Groups"
+msgstr ""
+
+#: includes/Admin/Groups.php:84
+msgid "Please enter the cookie group title. Example: Analyse."
+msgstr ""
+
+#: includes/Admin/Groups.php:81
+msgid "Group Title"
+msgstr ""
+
+#: includes/Admin/Groups.php:92
+msgid "Please enter the cookie group identifier ID in lowercase. Example: analytics."
+msgstr ""
+
+#: includes/Admin/Groups.php:89
+msgid "Group ID"
+msgstr ""
+
+#: includes/Admin/Groups.php:100
+msgid "Please enter the cookie group description."
+msgstr ""
+
+#: includes/Admin/Groups.php:97
+msgid "Group Description"
+msgstr ""
+
+#: includes/Admin/Pages.php:54
+msgid "Cookie Groups"
+msgstr ""
+
+#: includes/Admin/Pages.php:60
+msgid "Cookies"
+msgstr ""
+
+#: includes/Admin/Pages.php:66
+msgid "Cookie Box"
+msgstr ""
+
+#: includes/Admin/Pages.php:72, includes/Base/Settings_Links.php:46
+msgid "Settings"
+msgstr ""
+
+#: includes/Admin/Pages.php:98
+msgid "merryll Cookie"
+msgstr ""
+
+#: includes/Admin/Pages.php:113, includes/Admin/Pages.php:114, includes/Base/Settings_Links.php:53
+msgid "Dashboard"
+msgstr ""
+
+#: includes/Admin/Pages.php:145
+msgid "General"
+msgstr ""
+
+#: includes/Admin/Pages.php:146, includes/Admin/Tabs/Bar.php:61
+msgid "Floating Bar"
+msgstr ""
+
+#: includes/Admin/Pages.php:147
+msgid "Privacy Policy"
+msgstr ""
+
+#: includes/Admin/Pages.php:163
+msgid "Texts"
+msgstr ""
+
+#: includes/Admin/Pages.php:164
+msgid "Appearance"
+msgstr ""
+
+#: includes/Admin/Pages.php:165
+msgid "Buttons"
+msgstr ""
+
+#: includes/Admin/Tabs/Appearance.php:61
+msgid "Font Settings"
+msgstr ""
+
+#: includes/Admin/Tabs/Appearance.php:70
+msgid "Please enter the desired heading font size."
+msgstr ""
+
+#: includes/Admin/Tabs/Appearance.php:67
+msgid "Heading Font Size"
+msgstr ""
+
+#: includes/Admin/Tabs/Appearance.php:79
+msgid "Please enter the desired body font size."
+msgstr ""
+
+#: includes/Admin/Tabs/Appearance.php:76
+msgid "Body Font Size"
+msgstr ""
+
+#: includes/Admin/Tabs/Appearance.php:85
+msgid "Color Settings"
+msgstr ""
+
+#: includes/Admin/Tabs/Appearance.php:93
+msgid "Please choose the modal background color"
+msgstr ""
+
+#: includes/Admin/Tabs/Appearance.php:91, includes/Admin/Tabs/Bar.php:111, includes/Admin/Tabs/Buttons.php:138, includes/Admin/Tabs/Buttons.php:165, includes/Admin/Tabs/Buttons.php:192
+msgid "Background Color"
+msgstr ""
+
+#: includes/Admin/Tabs/Appearance.php:103
+msgid "Please choose the text color"
+msgstr ""
+
+#: includes/Admin/Tabs/Appearance.php:101, includes/Admin/Tabs/Bar.php:131
+msgid "Text Color"
+msgstr ""
+
+#: includes/Admin/Tabs/Appearance.php:113
+msgid "Please choose the link color"
+msgstr ""
+
+#: includes/Admin/Tabs/Appearance.php:111
+msgid "Link Color"
+msgstr ""
+
+#: includes/Admin/Tabs/Appearance.php:123
+msgid "Please choose the link hover color"
+msgstr ""
+
+#: includes/Admin/Tabs/Appearance.php:121
+msgid "Link Hover Color"
+msgstr ""
+
+#: includes/Admin/Tabs/Appearance.php:133
+msgid "Please choose the switch on color"
+msgstr ""
+
+#: includes/Admin/Tabs/Appearance.php:131
+msgid "Selection Switch On Color"
+msgstr ""
+
+#: includes/Admin/Tabs/Appearance.php:143
+msgid "Please choose the divider color"
+msgstr ""
+
+#: includes/Admin/Tabs/Appearance.php:141
+msgid "Divider Color"
+msgstr ""
+
+#: includes/Admin/Tabs/Bar.php:70
+msgid "If enabled, a floating text bar will be enabled at the right edge of the screen to access the consent popup."
+msgstr ""
+
+#: includes/Admin/Tabs/Bar.php:67
+msgid "Enable Floating Bar?"
+msgstr ""
+
+#: includes/Admin/Tabs/Bar.php:79
+msgid "Please enter the floating bar text."
+msgstr ""
+
+#: includes/Admin/Tabs/Bar.php:76
+msgid "Floating Bar Text"
+msgstr ""
+
+#: includes/Admin/Tabs/Bar.php:95
+msgid "Floating Bar Colors"
+msgstr ""
+
+#: includes/Admin/Tabs/Bar.php:114
+msgid "Please enter the floating bar background Color."
+msgstr ""
+
+#: includes/Admin/Tabs/Bar.php:134
+msgid "Please enter the floating bar text color."
+msgstr ""
+
+#: includes/Admin/Tabs/Bar.php:154
+msgid "Please enter the floating bar hover background Color."
+msgstr ""
+
+#: includes/Admin/Tabs/Bar.php:151, includes/Admin/Tabs/Buttons.php:148, includes/Admin/Tabs/Buttons.php:175, includes/Admin/Tabs/Buttons.php:202
+msgid "Hover Background Color"
+msgstr ""
+
+#: includes/Admin/Tabs/Bar.php:174
+msgid "Please enter the floating bar hover text color."
+msgstr ""
+
+#: includes/Admin/Tabs/Bar.php:171
+msgid "Hover Text Color"
+msgstr ""
+
+#: includes/Admin/Tabs/Buttons.php:61
+msgid "Consent Button Settings"
+msgstr ""
+
+#: includes/Admin/Tabs/Buttons.php:77
+msgid "Please select the functionality for the left button"
+msgstr ""
+
+#: includes/Admin/Tabs/Buttons.php:71
+msgid "Standard"
+msgstr ""
+
+#: includes/Admin/Tabs/Buttons.php:72
+msgid "Slightly Rounded"
+msgstr ""
+
+#: includes/Admin/Tabs/Buttons.php:73
+msgid "Rounded"
+msgstr ""
+
+#: includes/Admin/Tabs/Buttons.php:67
+msgid "Button Type"
+msgstr ""
+
+#: includes/Admin/Tabs/Buttons.php:83
+msgid "Button Texts"
+msgstr ""
+
+#: includes/Admin/Tabs/Buttons.php:93
+msgid "Alle Akzeptieren"
+msgstr ""
+
+#: includes/Admin/Tabs/Buttons.php:92
+msgid "Please enter the accept-all button text"
+msgstr ""
+
+#: includes/Admin/Tabs/Buttons.php:89
+msgid "Accept-All Button Text"
+msgstr ""
+
+#: includes/Admin/Tabs/Buttons.php:102
+msgid "Ausgewählte Akzeptieren"
+msgstr ""
+
+#: includes/Admin/Tabs/Buttons.php:101
+msgid "Please enter the accept-selected button text"
+msgstr ""
+
+#: includes/Admin/Tabs/Buttons.php:98
+msgid "Accept-Selected Button Text"
+msgstr ""
+
+#: includes/Admin/Tabs/Buttons.php:111
+msgid "Alle Ablehne"
+msgstr ""
+
+#: includes/Admin/Tabs/Buttons.php:110
+msgid "Please enter the reject-all button text"
+msgstr ""
+
+#: includes/Admin/Tabs/Buttons.php:107
+msgid "Reject-All Button Text"
+msgstr ""
+
+#: includes/Admin/Tabs/Buttons.php:120
+msgid "Speichern"
+msgstr ""
+
+#: includes/Admin/Tabs/Buttons.php:119
+msgid "Please enter the save button text"
+msgstr ""
+
+#: includes/Admin/Tabs/Buttons.php:116
+msgid "Save Button Text"
+msgstr ""
+
+#: includes/Admin/Tabs/Buttons.php:125
+msgid "Button Colors"
+msgstr ""
+
+#: includes/Admin/Tabs/Buttons.php:133
+msgid "Accept-All Button Color"
+msgstr ""
+
+#: includes/Admin/Tabs/Buttons.php:141
+msgid "Please choose the accept-all button color"
+msgstr ""
+
+#: includes/Admin/Tabs/Buttons.php:151
+msgid "Please choose the accept-all button hover color"
+msgstr ""
+
+#: includes/Admin/Tabs/Buttons.php:160
+msgid "Accept-Selected Button Color"
+msgstr ""
+
+#: includes/Admin/Tabs/Buttons.php:168
+msgid "Please choose the accept-selected button color"
+msgstr ""
+
+#: includes/Admin/Tabs/Buttons.php:178
+msgid "Please choose the accept-selected button hover color"
+msgstr ""
+
+#: includes/Admin/Tabs/Buttons.php:187
+msgid "Reject-All Button Color"
+msgstr ""
+
+#: includes/Admin/Tabs/Buttons.php:195
+msgid "Please choose the reject-all button color"
+msgstr ""
+
+#: includes/Admin/Tabs/Buttons.php:205
+msgid "Please choose the reject-all button hover color"
+msgstr ""
+
+#: includes/Admin/Tabs/General.php:61
+msgid "General Settings"
+msgstr ""
+
+#: includes/Admin/Tabs/General.php:70
+msgid "Please switch on to enable merryll cookie."
+msgstr ""
+
+#: includes/Admin/Tabs/General.php:67
+msgid "Enable merryll Cookie?"
+msgstr ""
+
+#: includes/Admin/Tabs/General.php:79
+msgid "Please enter a unique name."
+msgstr ""
+
+#: includes/Admin/Tabs/General.php:76
+msgid "Cookie Name"
+msgstr ""
+
+#: includes/Admin/Tabs/General.php:88
+msgid "Please enter cookie expiration days."
+msgstr ""
+
+#: includes/Admin/Tabs/General.php:85
+msgid "Cookie expiration (Days)"
+msgstr ""
+
+#: includes/Admin/Tabs/Privacy.php:61
+msgid "Privacy Policy Settings"
+msgstr ""
+
+#: includes/Admin/Tabs/Privacy.php:70
+msgid "Please select the Privacy Policy page."
+msgstr ""
+
+#: includes/Admin/Tabs/Privacy.php:67
+msgid "Privacy Policy Page"
+msgstr ""
+
+#: includes/Admin/Tabs/Privacy.php:79
+msgid "Please enter the custom link for Privacy Policy."
+msgstr ""
+
+#: includes/Admin/Tabs/Privacy.php:76
+msgid "Privacy Policy Custom URL"
+msgstr ""
+
+#: includes/Admin/Tabs/Privacy.php:99
+msgid "Datenschutzerklärung"
+msgstr ""
+
+#: includes/Admin/Tabs/Privacy.php:98
+msgid "Please enter the name for Privacy Policy link."
+msgstr ""
+
+#: includes/Admin/Tabs/Privacy.php:95
+msgid "Privacy Policy Name"
+msgstr ""
+
+#: includes/Admin/Tabs/Privacy.php:108
+msgid "Informationen dazu finden Sie in unserer {privacyPolicy}."
+msgstr ""
+
+#: includes/Admin/Tabs/Privacy.php:107
+msgid "Please enter the description for Privacy Policy. Please use {privacyPolicy} with the curly braces to print the autogenerated privacy policy text with link."
+msgstr ""
+
+#: includes/Admin/Tabs/Privacy.php:104
+msgid "Privacy Policy Text"
+msgstr ""
+
+#: includes/Admin/Tabs/Privacy.php:125
+msgid "--- Select a page ---"
+msgstr ""
+
+#: includes/Admin/Tabs/Privacy.php:126
+msgid "--- Custom External Link ---"
+msgstr ""
+
+#: includes/Admin/Tabs/Texts.php:61
+msgid "Consent Modal Top Texts"
+msgstr ""
+
+#: includes/Admin/Tabs/Texts.php:71
+msgid "Diese Internetseite verwendet Cookies und Tracking"
+msgstr ""
+
+#: includes/Admin/Tabs/Texts.php:70
+msgid "Please enter the consent modal main title"
+msgstr ""
+
+#: includes/Admin/Tabs/Texts.php:67
+msgid "Consent Modal Top Title"
+msgstr ""
+
+#: includes/Admin/Tabs/Texts.php:80
+msgid "Für einen Betrieb der Internetseite sind Notwendige Cookies erforderlich. Mit Ihrer Einwilligung kommen zusätzliche Tracking- Technologien (Cookies, Tags, Pixel etc.) zum Einsatz, die Daten zur Optimierung, Personalisierung, Lokalisierung und Analyse unseres Angebots sowie für Werbung erheben und an den jeweiligen Anbieter weitergegeben und dort zusammengeführt werden können."
+msgstr ""
+
+#: includes/Admin/Tabs/Texts.php:79
+msgid "Please enter the consent modal main description"
+msgstr ""
+
+#: includes/Admin/Tabs/Texts.php:76
+msgid "Consent Modal Top Description"
+msgstr ""
+
+#: includes/Admin/Tabs/Texts.php:85
+msgid "Consent Modal Deactivation Texts"
+msgstr ""
+
+#: includes/Admin/Tabs/Texts.php:95
+msgid "Alle deaktivieren"
+msgstr ""
+
+#: includes/Admin/Tabs/Texts.php:94
+msgid "Please enter the consent modal Deactivation title"
+msgstr ""
+
+#: includes/Admin/Tabs/Texts.php:91
+msgid "Consent Modal Deactivation Title"
+msgstr ""
+
+#: includes/Admin/Tabs/Texts.php:104
+msgid "Durch das Deaktivieren aller Dienste werden wir keine personenbezogenen Daten sammeln, benutzen oder übertragen, bis Sie uns Ihre explizite Einwilligung erteilen. Allerdings verhindert das, dass wir Ihnen die bestmögliche Erfahrung auf unserer Website geben können."
+msgstr ""
+
+#: includes/Admin/Tabs/Texts.php:103
+msgid "Please enter the consent modal deactivation description"
+msgstr ""
+
+#: includes/Admin/Tabs/Texts.php:100
+msgid "Consent Modal Deactivation Description"
+msgstr ""
+
+#: includes/Admin/Tabs/Texts.php:109
+msgid "Other Texts"
+msgstr ""
+
+#: includes/Admin/Tabs/Texts.php:119
+msgid "Dienst"
+msgstr ""
+
+#: includes/Admin/Tabs/Texts.php:118
+msgid "Please enter the service singular text"
+msgstr ""
+
+#: includes/Admin/Tabs/Texts.php:115
+msgid "Service Singular Text"
+msgstr ""
+
+#: includes/Admin/Tabs/Texts.php:128
+msgid "Dienste"
+msgstr ""
+
+#: includes/Admin/Tabs/Texts.php:127
+msgid "Please enter the service plural text"
+msgstr ""
+
+#: includes/Admin/Tabs/Texts.php:124
+msgid "Service Plural Text"
+msgstr ""
+
+#: includes/Admin/Tabs/Texts.php:137
+msgid "Zweck"
+msgstr ""
+
+#: includes/Admin/Tabs/Texts.php:136
+msgid "Please enter the purpose singular text"
+msgstr ""
+
+#: includes/Admin/Tabs/Texts.php:133
+msgid "Purpose Singular Text"
+msgstr ""
+
+#: includes/Admin/Tabs/Texts.php:146
+msgid "Zwecke"
+msgstr ""
+
+#: includes/Admin/Tabs/Texts.php:145
+msgid "Please enter the purpose plural text"
+msgstr ""
+
+#: includes/Admin/Tabs/Texts.php:142
+msgid "Purpose Plural Text"
+msgstr ""

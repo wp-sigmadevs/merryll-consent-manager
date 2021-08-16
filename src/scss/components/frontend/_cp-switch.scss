@@ -1,0 +1,111 @@
+/* ===========================
+	Modal Switch
+==============================*/
+
+.merryll-modal {
+	.cm-list-input {
+		position: absolute;
+		top: 0;
+		left: 0;
+		opacity: 0;
+		width: 0;
+		height: 0;
+		appearance: none;
+		-webkit-tap-highlight-color: transparent;
+		outline: none;
+		font-size: 0;
+		border: 0;
+		user-select: none;
+		cursor: pointer;
+		z-index: 0;
+		padding: 0;
+		margin: 0;
+
+		&:checked {
+			+ .cm-list-label {
+				.slider {
+					background-color: $public_modal_switch_on;
+
+					&::before {
+						transform: translateX(16px);
+					}
+				}
+			}
+		}
+
+		&.half-checked {
+			&:checked {
+				+ .cm-list-label {
+					.slider {
+						background-color: $public_modal_switch_on;
+						opacity: 0.6;
+
+						&::before {
+							transform: translateX(8px);
+						}
+					}
+				}
+			}
+		}
+
+		&.required {
+			&:checked {
+				+ .cm-list-label {
+					.slider {
+						background-color: $public_modal_switch_on;
+						opacity: 0.8;
+						cursor: not-allowed;
+					}
+				}
+			}
+		}
+	}
+
+	.cm-list-label {
+		.cm-switch {
+			position: absolute;
+			left: 0;
+			width: auto;
+			height: 30px;
+			display: inline-block;
+		}
+
+		.slider {
+			position: absolute;
+			cursor: pointer;
+			top: 4px;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-color: #ccc;
+			transition: 0.4s;
+			width: 50px;
+			display: inline-block;
+			height: 24px;
+			width: 40px;
+
+			&::before {
+				position: absolute;
+				content: '';
+				height: 20px;
+				width: 20px;
+				left: 5px;
+				bottom: 5px;
+				background-color: $color_white;
+				transition: 0.4s;
+				bottom: 3px;
+				height: 18px;
+				left: 3px;
+				width: 18px;
+			}
+
+			&.round {
+				border-radius: 30px;
+
+				&::before {
+					border-radius: 50%;
+				}
+			}
+		}
+	}
+}

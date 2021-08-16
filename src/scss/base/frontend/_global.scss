@@ -1,0 +1,51 @@
+/* ===========================
+	Global Admin CSS
+==============================*/
+:root {
+	--merryll-public-modal-bg: #0073aa;
+	--merryll-public-modal-text: #0073aa;
+	--merryll-public-modal-link: #0073aa;
+	--merryll-public-modal-link-hover: #0073aa;
+	--merryll-public-modal-switch-on: #0073aa;
+	--merryll-public-modal-divider: #0073aa;
+	--merryll-public-heading-font-size: 24px;
+	--merryll-public-font-size: 15px;
+	--merryll-public-acc-all-btn-bg: #0073aa;
+	--merryll-public-acc-all-btn-bg-hover: #0073aa;
+	--merryll-public-acc-sel-btn-bg: #0073aa;
+	--merryll-public-acc-sel-btn-bg-hover: #0073aa;
+	--merryll-public-rej-btn-bg: #0073aa;
+	--merryll-public-rej-btn-bg-hover: #0073aa;
+	--merryll-public-consent-btn-bg: #0073aa;
+	--merryll-public-consent-btn-hover-bg: #0073aa;
+	--merryll-public-consent-btn-text: #fff;
+	--merryll-public-consent-btn-hover-text: #fff;
+}
+
+.d-flex {
+	@extend %d-flex;
+}
+
+.flex-wrap {
+	@extend %flex-wrap;
+}
+
+.justify-content-center {
+	@extend %justify-content-center;
+}
+
+.align-items-center {
+	@extend %align-items-center;
+}
+
+.btn-order-1 {
+	order: 1;
+}
+
+.btn-order-2 {
+	order: 2;
+}
+
+.btn-order-3 {
+	order: 3;
+}

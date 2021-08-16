@@ -1,0 +1,61 @@
+/* ===========================
+	Layout: Header
+==============================*/
+
+.klaro {
+	&.merryll-modal {
+		.cookie-modal {
+			.cm-header {
+				box-shadow: 0 6px 10px 0 var(--merryll-public-modal-bg);
+				position: relative;
+				z-index: 1;
+				padding-top: 35px;
+
+				.title {
+					color: $public_modal_text_color;
+					font-size: 20px;
+					margin-top: 0;
+					padding-top: 0;
+					margin-bottom: 20px;
+					line-height: 1.2;
+
+					&::before {
+						content: none !important;
+					}
+
+					@include media-only(mobile) {
+						font-size: $public_modal_heading_font_size;
+					}
+				}
+
+				&::before,
+				&::after {
+					content: "";
+					position: absolute;
+					top: 0;
+				}
+
+				&::before {
+					content: "";
+					position: absolute;
+					top: -2px;
+					left: 0;
+					background-image: url(../images/merryll-logo.png);
+					background-repeat: no-repeat;
+					background-position: center center;
+					background-size: contain;
+					width: 75px;
+					height: 20px;
+				}
+
+				&::after {
+					content: "\00a9\00a0 merryll";
+					right: 0;
+					font-size: 14px;
+					line-height: 1.3;
+					color: #3ab9eb;
+				}
+			}
+		}
+	}
+}

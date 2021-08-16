@@ -1,20 +1,26 @@
 import MerryllConfig from './frontend/MerryllConfig';
+import MerryllUtils from './frontend/Utils';
 import MerryllHelpers from './frontend/Helpers';
 
 let merryllConsent = {};
 
 merryllConsent = {
-	run: () => {
-		new MerryllConfig();
+	init: () => {
+		return new MerryllConfig();
+	},
+	readyEvent: () => {
+		MerryllHelpers.ready(MerryllUtils.ModalActions);
+		MerryllHelpers.ready(MerryllUtils.assignHeight);
+	},
+	resizeEvent: () => {
+		MerryllHelpers.resize(MerryllUtils.assignHeight);
+	},
+	loadEvent: () => {
+		MerryllHelpers.load(MerryllUtils.bodyClass);
 	}
 };
 
-// MerryllHelpers.ready(merryllConsent.run());
-
-// jQuery(document).ready(function($) {
-// 	$(document).on('carbonFields.apiLoaded', function(e, api) {
-// 		// Get the current value in the 'crb_text' field
-// 		var value = api.getFieldValue('merryll_cookie_name');
-// 		console.log('value:', value);
-// 	});
-// });
+window.klaroConfig = merryllConsent.init();
+merryllConsent.readyEvent();
+merryllConsent.resizeEvent();
+merryllConsent.loadEvent();

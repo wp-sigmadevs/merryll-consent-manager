@@ -51,14 +51,15 @@ module.exports = {
 		'**/*.woff',
 		'**/*.woff2',
 		'**/*.pot',
-		'LICENSE.txt',
-		'README.txt',
 		'**/*/installed.json',
 		'**/*/LICENSE',
+		'LICENSE',
+		'README.md',
 		'**/*/composer.json',
 		'**/*/*.mo',
 		'**/*/*.po',
 		'**/*/*.scss',
+		'md5.json',
 
 		// exclude files and folders
 		'!**/.*',
@@ -67,12 +68,13 @@ module.exports = {
 		'!merryll.config.js',
 		'!gulpfile.js',
 		'!src/images/**/*',
-		'!src/scripts/**/*',
-		'!src/styles/**/*',
+		'!src/scss/**/*',
+		'!src/js/**/*',
 		'!vendor/htmlburger/carbon-fields/bin/**/*',
 		'!vendor/htmlburger/carbon-fields/composer.json',
 		'!vendor/htmlburger/carbon-fields/webpack.config.js',
-		'!vendor/htmlburger/carbon-fields/assets/**/*'
+		'!vendor/htmlburger/carbon-fields/assets/**/*',
+		'!webpack.config.js'
 	],
 	buildFinalZip: './dist/',
 
@@ -86,9 +88,9 @@ module.exports = {
 	translationFile: 'merryll-consent-manager.pot',
 	translationDestination: './languages',
 	packageName: 'merryll Consent Manager',
-	bugReport: 'https://github.com/wp-sigmadevs/merryll-consent-manager/issues',
-	lastTranslator: 'S.M. Rafiz <srafiz@sigmadevs.com>',
-	team: 'Sigma Devs <srafiz@sigmadevs.net>',
+	bugReport: 'https://merryll.de/',
+	lastTranslator: 'merryll Media',
+	team: 'merryll Media',
 
 	// Browsers for autoprefixing.
 	BROWSERS_LIST: [

@@ -1,24 +1,14 @@
 class MerryllHelpers {
 	static ready(fn) {
-		if (document.readyState !== 'loading') {
-			fn();
-		} else if (document.addEventListener) {
-			document.addEventListener('DOMContentLoaded', fn);
-		} else {
-			document.attachEvent('onreadystatechange', function() {
-				if (document.readyState !== 'loading') {
-					fn();
-				}
-			});
-		}
+		document.addEventListener('DOMContentLoaded', fn);
 	}
 
-	static toArray(nodelist) {
-		return !nodelist.length || typeof nodelist !== 'object' ? nodelist : [].slice.call(nodelist);
+	static resize(fn) {
+		window.addEventListener('resize', fn);
 	}
 
-	static isEmptyObj(obj) {
-		return Object.keys(obj).length === 0 && obj.constructor === Object;
+	static load(fn) {
+		window.addEventListener('load', fn);
 	}
 }
 
