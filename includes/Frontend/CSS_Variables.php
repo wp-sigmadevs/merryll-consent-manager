@@ -57,6 +57,8 @@ class CSS_Variables {
 			:root{
 				--merryll-public-heading-font-size:' . $this->variables['fonts']['heading-size'] . ';
 				--merryll-public-font-size:' . $this->variables['fonts']['size'] . ';
+				--merryll-public-heading-ls:' . $this->variables['fonts']['heading-ls'] . ';
+				--merryll-public-body-ls:' . $this->variables['fonts']['body-ls'] . ';
 				--merryll-public-modal-bg:' . $this->variables['colors']['bg'] . ';
 				--merryll-public-modal-text:' . $this->variables['colors']['text'] . ';
 				--merryll-public-modal-link:' . $this->variables['colors']['link'] . ';
@@ -73,6 +75,8 @@ class CSS_Variables {
 				--merryll-public-consent-btn-hover-bg:' . $this->variables['bar']['hover-bg'] . ';
 				--merryll-public-consent-btn-text:' . $this->variables['bar']['text'] . ';
 				--merryll-public-consent-btn-hover-text:' . $this->variables['bar']['hover-text'] . ';
+				--merryll-public-consent-top-text-color:' . $this->variables['colors']['top-text'] . ';
+				--merryll-public-consent-pb-text-color:' . $this->variables['colors']['pb-text'] . ';
 		}';
 
 		wp_add_inline_style( 'merryll-consent-stylesheet', str_replace( array( "\r", "\n", "\t" ), '', $plugin_vars ) );
@@ -94,6 +98,8 @@ class CSS_Variables {
 		$this->variables['colors']['hover']   = self::validate( '_merryll_link_hover_color' );
 		$this->variables['colors']['switch']  = self::validate( '_merryll_switch_on_color' );
 		$this->variables['colors']['divider'] = self::validate( '_merryll_divider_color' );
+		$this->variables['colors']['top-text'] = self::validate( '_merryll_top_right_text_color' );
+		$this->variables['colors']['pb-text'] = self::validate( '_merryll_poweredby_text_color' );
 
 		return $this;
 	}
@@ -109,6 +115,8 @@ class CSS_Variables {
 	private function fonts() {
 		$this->variables['fonts']['heading-size'] = self::validate( '_merryll_heading_font_size' );
 		$this->variables['fonts']['size']         = self::validate( '_merryll_font_size' );
+		$this->variables['fonts']['heading-ls']   = self::validate( '_merryll_heading_letter_sp' );
+		$this->variables['fonts']['body-ls']      = self::validate( '_merryll_body_letter_sp' );
 
 		return $this;
 	}

@@ -6,11 +6,10 @@
 	background-color: $public_modal_bg_color;
 	box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
 	height: auto;
-	max-height: 98vh;
 	width: 100%;
 	overflow: auto;
+	max-height: 80vh;
 	padding: 20px;
-	z-index: 99992;
 	color: $public_modal_text_color;
 	box-sizing: border-box;
 	@extend %pos-r;
@@ -18,6 +17,7 @@
 	@include media-only(tablet) {
 		margin: 20px;
 		width: 640px;
+		max-height: 98vh;
 	}
 
 	h1,
@@ -39,6 +39,7 @@
 		hyphens: auto;
 		line-height: 1.4;
 		margin-bottom: 0;
+		letter-spacing: var(--merryll-public-body-ls);
 
 		@include media-only(tablet) {
 			font-size: $public_modal_font_size;

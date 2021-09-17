@@ -17,6 +17,10 @@ class MerryllUtils {
 		document.addEventListener('click', function(e) {
 			if (e.target && e.target.classList.contains('cm-btn-accept')) {
 				document.body.classList.remove('merryll-modal-active');
+
+				setTimeout(() => {
+					merryllKlaro.style.height = 'auto';
+				}, 700);
 			}
 		});
 

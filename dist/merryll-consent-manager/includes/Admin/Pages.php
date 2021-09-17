@@ -16,6 +16,7 @@ use Merryll\Merryll_Consent_Manager\Admin\Groups;
 use Merryll\Merryll_Consent_Manager\Admin\Cookies;
 use Merryll\Merryll_Consent_Manager\Admin\Tabs\Bar;
 use Merryll\Merryll_Consent_Manager\Admin\Dashboard;
+use Merryll\Merryll_Consent_Manager\Admin\Tabs\Logo;
 use Merryll\Merryll_Consent_Manager\Admin\Tabs\Texts;
 use Merryll\Merryll_Consent_Manager\Admin\Tabs\General;
 use Merryll\Merryll_Consent_Manager\Admin\Tabs\Buttons;
@@ -95,7 +96,7 @@ class Pages extends Base_Controller {
 	 */
 	public function top_level_menu_label() {
 		global $menu;
-		$menu[40][0] = esc_html__( 'merryll Cookie', 'merryll-consent-manager' );
+		$menu[41][0] = esc_html__( 'merryll Cookie', 'merryll-consent-manager' );
 
 		echo '';
 	}
@@ -116,7 +117,7 @@ class Pages extends Base_Controller {
 			'merryll_cookie',
 			array( $this, 'create_dashboard' ),
 			'dashicons-merryll-manager',
-			40
+			41
 		);
 	}
 
@@ -160,6 +161,7 @@ class Pages extends Base_Controller {
 	 */
 	private function cookie_box_tabs() {
 		$tabs = array(
+			esc_html__( 'Logo', 'merryll-consent-manager' )    => Logo::class,
 			esc_html__( 'Texts', 'merryll-consent-manager' )   => Texts::class,
 			esc_html__( 'Appearance', 'merryll-consent-manager' )  => Appearance::class,
 			esc_html__( 'Buttons', 'merryll-consent-manager' ) => Buttons::class,

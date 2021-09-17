@@ -154,52 +154,72 @@ msgstr ""
 msgid "Group Description"
 msgstr ""
 
-#: includes/Admin/Pages.php:54
+#: includes/Admin/Pages.php:55
 msgid "Cookie Groups"
 msgstr ""
 
-#: includes/Admin/Pages.php:60
+#: includes/Admin/Pages.php:61
 msgid "Cookies"
 msgstr ""
 
-#: includes/Admin/Pages.php:66
+#: includes/Admin/Pages.php:67
 msgid "Cookie Box"
 msgstr ""
 
-#: includes/Admin/Pages.php:72, includes/Base/Settings_Links.php:46
+#: includes/Admin/Pages.php:73, includes/Base/Settings_Links.php:46
 msgid "Settings"
 msgstr ""
 
-#: includes/Admin/Pages.php:98
+#: includes/Admin/Pages.php:99
 msgid "merryll Cookie"
 msgstr ""
 
-#: includes/Admin/Pages.php:113, includes/Admin/Pages.php:114, includes/Base/Settings_Links.php:53
+#: includes/Admin/Pages.php:114, includes/Admin/Pages.php:115, includes/Base/Settings_Links.php:53
 msgid "Dashboard"
 msgstr ""
 
-#: includes/Admin/Pages.php:145
+#: includes/Admin/Pages.php:146
 msgid "General"
 msgstr ""
 
-#: includes/Admin/Pages.php:146, includes/Admin/Tabs/Bar.php:61
+#: includes/Admin/Pages.php:147, includes/Admin/Tabs/Bar.php:61
 msgid "Floating Bar"
 msgstr ""
 
-#: includes/Admin/Pages.php:147
+#: includes/Admin/Pages.php:148
 msgid "Privacy Policy"
 msgstr ""
 
-#: includes/Admin/Pages.php:163
-msgid "Texts"
-msgstr ""
-
 #: includes/Admin/Pages.php:164
-msgid "Appearance"
+msgid "Logo"
 msgstr ""
 
 #: includes/Admin/Pages.php:165
+msgid "Texts"
+msgstr ""
+
+#: includes/Admin/Pages.php:166
+msgid "Appearance"
+msgstr ""
+
+#: includes/Admin/Pages.php:167
 msgid "Buttons"
+msgstr ""
+
+#: includes/Frontend/Localize.php:53
+msgid "Zwecke"
+msgstr ""
+
+#: includes/Frontend/Localize.php:74
+msgid "Dienst"
+msgstr ""
+
+#: includes/Frontend/Localize.php:75
+msgid "Dienste"
+msgstr ""
+
+#: includes/Frontend/Localize.php:85
+msgid "Zweck"
 msgstr ""
 
 #: includes/Admin/Tabs/Appearance.php:61
@@ -215,62 +235,78 @@ msgid "Heading Font Size"
 msgstr ""
 
 #: includes/Admin/Tabs/Appearance.php:79
-msgid "Please enter the desired body font size."
+msgid "Please enter the desired heading letter spacing."
 msgstr ""
 
 #: includes/Admin/Tabs/Appearance.php:76
-msgid "Body Font Size"
+msgid "Heading Letter Spacing"
+msgstr ""
+
+#: includes/Admin/Tabs/Appearance.php:88
+msgid "Please enter the desired body font size."
 msgstr ""
 
 #: includes/Admin/Tabs/Appearance.php:85
-msgid "Color Settings"
+msgid "Body Font Size"
 msgstr ""
 
-#: includes/Admin/Tabs/Appearance.php:93
-msgid "Please choose the modal background color"
+#: includes/Admin/Tabs/Appearance.php:97
+msgid "Please enter the desired body letter spacing."
 msgstr ""
 
-#: includes/Admin/Tabs/Appearance.php:91, includes/Admin/Tabs/Bar.php:111, includes/Admin/Tabs/Buttons.php:138, includes/Admin/Tabs/Buttons.php:165, includes/Admin/Tabs/Buttons.php:192
-msgid "Background Color"
+#: includes/Admin/Tabs/Appearance.php:94
+msgid "Body Letter Spacing"
 msgstr ""
 
 #: includes/Admin/Tabs/Appearance.php:103
-msgid "Please choose the text color"
-msgstr ""
-
-#: includes/Admin/Tabs/Appearance.php:101, includes/Admin/Tabs/Bar.php:131
-msgid "Text Color"
-msgstr ""
-
-#: includes/Admin/Tabs/Appearance.php:113
-msgid "Please choose the link color"
+msgid "Color Settings"
 msgstr ""
 
 #: includes/Admin/Tabs/Appearance.php:111
-msgid "Link Color"
+msgid "Please choose the modal background color"
 msgstr ""
 
-#: includes/Admin/Tabs/Appearance.php:123
-msgid "Please choose the link hover color"
+#: includes/Admin/Tabs/Appearance.php:109, includes/Admin/Tabs/Bar.php:111, includes/Admin/Tabs/Buttons.php:138, includes/Admin/Tabs/Buttons.php:165, includes/Admin/Tabs/Buttons.php:192
+msgid "Background Color"
 msgstr ""
 
 #: includes/Admin/Tabs/Appearance.php:121
-msgid "Link Hover Color"
+msgid "Please choose the text color"
 msgstr ""
 
-#: includes/Admin/Tabs/Appearance.php:133
-msgid "Please choose the switch on color"
+#: includes/Admin/Tabs/Appearance.php:119, includes/Admin/Tabs/Bar.php:131
+msgid "Text Color"
 msgstr ""
 
 #: includes/Admin/Tabs/Appearance.php:131
-msgid "Selection Switch On Color"
+msgid "Please choose the link color"
 msgstr ""
 
-#: includes/Admin/Tabs/Appearance.php:143
-msgid "Please choose the divider color"
+#: includes/Admin/Tabs/Appearance.php:129
+msgid "Link Color"
 msgstr ""
 
 #: includes/Admin/Tabs/Appearance.php:141
+msgid "Please choose the link hover color"
+msgstr ""
+
+#: includes/Admin/Tabs/Appearance.php:139
+msgid "Link Hover Color"
+msgstr ""
+
+#: includes/Admin/Tabs/Appearance.php:151
+msgid "Please choose the switch on color"
+msgstr ""
+
+#: includes/Admin/Tabs/Appearance.php:149
+msgid "Selection Switch On Color"
+msgstr ""
+
+#: includes/Admin/Tabs/Appearance.php:161
+msgid "Please choose the divider color"
+msgstr ""
+
+#: includes/Admin/Tabs/Appearance.php:159
 msgid "Divider Color"
 msgstr ""
 
@@ -323,7 +359,7 @@ msgid "Consent Button Settings"
 msgstr ""
 
 #: includes/Admin/Tabs/Buttons.php:77
-msgid "Please select the functionality for the left button"
+msgid "Please select the button type."
 msgstr ""
 
 #: includes/Admin/Tabs/Buttons.php:71
@@ -462,6 +498,74 @@ msgstr ""
 msgid "Cookie expiration (Days)"
 msgstr ""
 
+#: includes/Admin/Tabs/Logo.php:61
+msgid "Logo Settings"
+msgstr ""
+
+#: includes/Admin/Tabs/Logo.php:70
+msgid "Please upload the top left logo."
+msgstr ""
+
+#: includes/Admin/Tabs/Logo.php:67
+msgid "Upload Top Left Logo"
+msgstr ""
+
+#: includes/Admin/Tabs/Logo.php:78
+msgid "Please enter the top right text."
+msgstr ""
+
+#: includes/Admin/Tabs/Logo.php:75
+msgid "Top Right Text"
+msgstr ""
+
+#: includes/Admin/Tabs/Logo.php:87
+msgid "Please choose the top right text color."
+msgstr ""
+
+#: includes/Admin/Tabs/Logo.php:84
+msgid "Top Right Text Color"
+msgstr ""
+
+#: includes/Admin/Tabs/Logo.php:96
+msgid "Please enter the top logo link."
+msgstr ""
+
+#: includes/Admin/Tabs/Logo.php:93
+msgid "Top Logo Link"
+msgstr ""
+
+#: includes/Admin/Tabs/Logo.php:102
+msgid "Powered By Settings"
+msgstr ""
+
+#: includes/Admin/Tabs/Logo.php:112
+msgid "Cookie Button Entwicklung by merryll"
+msgstr ""
+
+#: includes/Admin/Tabs/Logo.php:111
+msgid "Please enter the footer powered by text."
+msgstr ""
+
+#: includes/Admin/Tabs/Logo.php:108
+msgid "Footer Powered By Text"
+msgstr ""
+
+#: includes/Admin/Tabs/Logo.php:120
+msgid "Please choose the powered by text color."
+msgstr ""
+
+#: includes/Admin/Tabs/Logo.php:117
+msgid "Powered By Text Color"
+msgstr ""
+
+#: includes/Admin/Tabs/Logo.php:129
+msgid "Please enter the footer powered by link."
+msgstr ""
+
+#: includes/Admin/Tabs/Logo.php:126
+msgid "Footer Powered By Link"
+msgstr ""
+
 #: includes/Admin/Tabs/Privacy.php:61
 msgid "Privacy Policy Settings"
 msgstr ""
@@ -543,7 +647,7 @@ msgid "Consent Modal Top Description"
 msgstr ""
 
 #: includes/Admin/Tabs/Texts.php:85
-msgid "Consent Modal Deactivation Texts"
+msgid "Consent Modal Toggle All On/Off Texts"
 msgstr ""
 
 #: includes/Admin/Tabs/Texts.php:95
@@ -551,11 +655,11 @@ msgid "Alle deaktivieren"
 msgstr ""
 
 #: includes/Admin/Tabs/Texts.php:94
-msgid "Please enter the consent modal Deactivation title"
+msgid "Please enter the consent modal toggle all on/off title"
 msgstr ""
 
 #: includes/Admin/Tabs/Texts.php:91
-msgid "Consent Modal Deactivation Title"
+msgid "Consent Modal Toggle All On/Off Title"
 msgstr ""
 
 #: includes/Admin/Tabs/Texts.php:104
@@ -563,61 +667,9 @@ msgid "Durch das Deaktivieren aller Dienste werden wir keine personenbezogenen D
 msgstr ""
 
 #: includes/Admin/Tabs/Texts.php:103
-msgid "Please enter the consent modal deactivation description"
+msgid "Please enter the consent modal toggle all on/off description"
 msgstr ""
 
 #: includes/Admin/Tabs/Texts.php:100
-msgid "Consent Modal Deactivation Description"
-msgstr ""
-
-#: includes/Admin/Tabs/Texts.php:109
-msgid "Other Texts"
-msgstr ""
-
-#: includes/Admin/Tabs/Texts.php:119
-msgid "Dienst"
-msgstr ""
-
-#: includes/Admin/Tabs/Texts.php:118
-msgid "Please enter the service singular text"
-msgstr ""
-
-#: includes/Admin/Tabs/Texts.php:115
-msgid "Service Singular Text"
-msgstr ""
-
-#: includes/Admin/Tabs/Texts.php:128
-msgid "Dienste"
-msgstr ""
-
-#: includes/Admin/Tabs/Texts.php:127
-msgid "Please enter the service plural text"
-msgstr ""
-
-#: includes/Admin/Tabs/Texts.php:124
-msgid "Service Plural Text"
-msgstr ""
-
-#: includes/Admin/Tabs/Texts.php:137
-msgid "Zweck"
-msgstr ""
-
-#: includes/Admin/Tabs/Texts.php:136
-msgid "Please enter the purpose singular text"
-msgstr ""
-
-#: includes/Admin/Tabs/Texts.php:133
-msgid "Purpose Singular Text"
-msgstr ""
-
-#: includes/Admin/Tabs/Texts.php:146
-msgid "Zwecke"
-msgstr ""
-
-#: includes/Admin/Tabs/Texts.php:145
-msgid "Please enter the purpose plural text"
-msgstr ""
-
-#: includes/Admin/Tabs/Texts.php:142
-msgid "Purpose Plural Text"
+msgid "Consent Modal Toggle All On/Off Description"
 msgstr ""

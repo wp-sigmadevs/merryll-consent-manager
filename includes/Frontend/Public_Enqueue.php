@@ -71,7 +71,7 @@ class Public_Enqueue extends Enqueue {
 		// Main Stylesheet.
 		$styles[] = array(
 			'handle'    => 'merryll-consent-stylesheet',
-			'asset_uri' => $this->get_plugin_url() . 'assets/css/frontend.css',
+			'asset_uri' => $this->get_plugin_url() . 'assets/css/frontend.min.css',
 			'version'   => $this->get_plugin_version(),
 		);
 
@@ -94,7 +94,7 @@ class Public_Enqueue extends Enqueue {
 		// Config JS.
 		$scripts[] = array(
 			'handle'     => 'merryll-config',
-			'asset_uri'  => $this->get_plugin_url() . '/assets/js/config.min.js',
+			'asset_uri'  => $this->get_plugin_url() . 'assets/js/config.min.js',
 			'dependency' => array(),
 			'version'    => $this->get_plugin_version(),
 		);
@@ -102,7 +102,7 @@ class Public_Enqueue extends Enqueue {
 		// Klaro JS.
 		$scripts[] = array(
 			'handle'     => 'merryll-klaro-script',
-			'asset_uri'  => $this->get_plugin_url() . '/assets/js/klaro.min.js',
+			'asset_uri'  => $this->get_plugin_url() . 'assets/js/klaro.min.js',
 			'dependency' => array(),
 			'version'    => '0.7.18',
 		);

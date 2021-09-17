@@ -6,10 +6,13 @@
 	&.merryll-modal {
 		.cookie-modal {
 			.cm-body {
-				max-height: 250px;
-				overflow: auto;
 				padding: 20px 0;
 				padding-right: 20px;
+
+				@include media-only(mobile) {
+					max-height: 250px;
+					overflow: auto;
+				}
 
 				ul {
 					display: block;
@@ -49,6 +52,7 @@
 							display: block;
 							padding-left: 5px;
 							margin-bottom: 10px;
+							letter-spacing: var(--merryll-public-heading-ls);
 						}
 
 						.cm-content {
@@ -103,5 +107,21 @@
 				}
 			}
 		}
+	}
+}
+
+.merryll-modal-active {
+	overflow-y: hidden;
+	position: relative;
+
+	@include media-only(mobile) {
+		overflow-y: initial;
+		position: initial;
+	}
+}
+
+.merryll-modal-active {
+	.merryll-modal {
+		z-index: 99992;
 	}
 }

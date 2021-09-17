@@ -28,7 +28,7 @@
 .postbox .cf-textarea textarea{height:150px;border-radius:0;margin-left:auto;margin-right:auto}
 .postbox .cf-textarea textarea::-webkit-inner-spin-button{display:none}
 .postbox .cf-container .cf-field__label{text-align:center;padding-bottom:12px;font-size:18px;margin-top:12px;margin-bottom:12px;display:block}
-.postbox .cf-select__input{height:40px;line-height:36px;color:#333;outline:0;border-radius:0;max-width:100%}
+.postbox .cf-select__input{height:40px !important;line-height:36px;color:#333;outline:0;border-radius:0;max-width:100% !important}
 .postbox .cf-select__input:hover,.postbox .cf-select__input:focus{color:#333}
 .postbox .cf-color__toggle{border-radius:0;color:#333;border-color:#333}
 .postbox .cf-color__toggle .cf-color__preview{width:40px}

@@ -116,7 +116,10 @@ var MerryllConfig = /*#__PURE__*/function () {
         htmlTexts: true,
         embedded: false,
         groupByPurpose: true,
-        disablePoweredBy: true,
+        poweredBy: merryllSettings.poweredByLink,
+        logo: merryllSettings.logo,
+        copyright: merryllSettings.copyright,
+        clientUrl: merryllSettings.clientUrl,
         storageMethod: 'cookie',
         cookieName: merryllSettings.elementID,
         cookieExpiresAfterDays: merryllSettings.cookieExpires,
@@ -198,6 +201,9 @@ var MerryllUtils = /*#__PURE__*/function () {
       document.addEventListener('click', function (e) {
         if (e.target && e.target.classList.contains('cm-btn-accept')) {
           document.body.classList.remove('merryll-modal-active');
+          setTimeout(function () {
+            merryllKlaro.style.height = 'auto';
+          }, 700);
         }
       });
       merryllKlaro.removeAttribute('lang');

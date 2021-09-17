@@ -74,7 +74,7 @@ class Buttons {
 			)
 		)
 		->set_classes( 'two-col flex-wrap justify-content-end no-top-border' )
-		->set_help_text( esc_html__( 'Please select the functionality for the left button', 'merryll-consent-manager' ) )
+		->set_help_text( esc_html__( 'Please select the button type.', 'merryll-consent-manager' ) )
 		->set_default_value( 'standard' );
 
 		self::$fields[] = Field::make(

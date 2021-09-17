@@ -72,12 +72,30 @@ class Appearance {
 
 		self::$fields[] = Field::make(
 			'text',
+			'merryll_heading_letter_sp',
+			esc_html__( 'Heading Letter Spacing', 'merryll-consent-manager' )
+		)
+		->set_classes( 'two-col flex-wrap justify-content-end' )
+		->set_help_text( esc_html__( 'Please enter the desired heading letter spacing.', 'merryll-consent-manager' ) )
+		->set_default_value( '0px' );
+
+		self::$fields[] = Field::make(
+			'text',
 			'merryll_font_size',
 			esc_html__( 'Body Font Size', 'merryll-consent-manager' )
 		)
 		->set_classes( 'two-col flex-wrap justify-content-end' )
 		->set_help_text( esc_html__( 'Please enter the desired body font size.', 'merryll-consent-manager' ) )
 		->set_default_value( '15px' );
+
+		self::$fields[] = Field::make(
+			'text',
+			'merryll_body_letter_sp',
+			esc_html__( 'Body Letter Spacing', 'merryll-consent-manager' )
+		)
+		->set_classes( 'two-col flex-wrap justify-content-end' )
+		->set_help_text( esc_html__( 'Please enter the desired body letter spacing.', 'merryll-consent-manager' ) )
+		->set_default_value( '0.8px' );
 
 		self::$fields[] = Field::make(
 			'separator',

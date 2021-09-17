@@ -77,7 +77,7 @@ class General {
 		)
 		->set_classes( 'two-col flex-wrap justify-content-end' )
 		->set_help_text( esc_html__( 'Please enter a unique name.', 'merryll-consent-manager' ) )
-		->set_default_value( 'merryll' );
+		->set_default_value( 'merryllConsent' );
 
 		self::$fields[] = Field::make(
 			'text',

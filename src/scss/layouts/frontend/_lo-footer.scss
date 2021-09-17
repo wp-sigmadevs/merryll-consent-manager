@@ -34,5 +34,26 @@
 }
 
 .cm-powered-by {
-	display: none;
+	text-align: center;
+	margin-top: 0;
+	line-height: 1.4;
+	margin-bottom: -5px !important;
+
+	@include media-only(mobile) {
+		text-align: right;
+		margin-top: 15px;
+	}
+
+	> a {
+		font-size: 13px;
+		display: block;
+		line-height: 1.4;
+		margin-bottom: 0;
+		color: var(--merryll-public-consent-pb-text-color);
+
+		&:hover,
+		&:focus {
+			color: var(--merryll-public-consent-pb-text-color);
+		}
+	}
 }

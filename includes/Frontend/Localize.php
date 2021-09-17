@@ -10,12 +10,14 @@
 
 namespace Merryll\Merryll_Consent_Manager\Frontend;
 
+use Merryll\Merryll_Consent_Manager\Base\Base_Controller;
+
 /**
  * Localize Class.
  *
  * @since  1.0.0
  */
-class Localize {
+class Localize extends Base_Controller {
 
 	/**
 	 * Method to register frontend scripts.
@@ -48,9 +50,13 @@ class Localize {
 			'elementID'         => self::validate( 'merryll_cookie_name' ),
 			'cookieExpires'     => self::validate( 'merryll_cookie_expire' ),
 			'privacyPolicyLink' => self::privacy_url(),
-			'purposePlural'     => self::validate( 'merryll_modal_purpose_plural' ),
+			'purposePlural'     => esc_html__( 'Zwecke', 'merryll-consent-manager' ),
 			'services'          => self::get_services(),
 			'additionalClass'   => self::custom_classes(),
+			'logo'              => esc_url( self::image_url() ),
+			'copyright'         => self::validate( 'merryll_top_right_text' ),
+			'poweredByLink'     => esc_url( self::validate( 'merryll_poweredby_link' ) ),
+			'clientUrl'         => esc_url( self::validate( 'merryll_top_link' ) ),
 			'translations'      => array(
 				'default' => array(
 					'acceptAll'      => self::validate( 'merryll_acc_all_btn_text' ),
@@ -65,18 +71,18 @@ class Localize {
 						'text' => self::validate( 'merryll_privacy_text' ),
 					),
 					'purposeItem'    => array(
-						'service'  => self::validate( 'merryll_modal_service_singular' ),
-						'services' => self::validate( 'merryll_modal_service_plural' ),
+						'service'  => esc_html__( 'Dienst', 'merryll-consent-manager' ),
+						'services' => esc_html__( 'Dienste', 'merryll-consent-manager' ),
 					),
 					'purposes'       => self::get_purposes(),
-					'poweredBy'      => 'merryll Media',
+					'poweredBy'      => self::validate( 'merryll_poweredby_text' ),
 					'save'           => self::validate( 'merryll_save_btn_text' ),
 					'service'        => array(
 						'disableAll' => array(
 							'title'       => self::validate( 'merryll_modal_deactivation_title' ),
 							'description' => self::validate( 'merryll_modal_deactive_desc' ),
 						),
-						'purpose'    => self::validate( 'merryll_modal_purpose_text' ),
+						'purpose'    => esc_html__( 'Zweck', 'merryll-consent-manager' ),
 					),
 				),
 			),
@@ -217,9 +223,30 @@ class Localize {
 		);
 
 		$button_type = carbon_get_theme_option( 'merryll_btn_type' );
+		$top_url     = carbon_get_theme_option( 'merryll_top_link' );
 
 		$classes[] = ! empty( $button_type ) ? $button_type . '-btn' : 'standard-btn';
+		$classes[] = ! empty( $top_url ) ? 'has-client-url' : 'no-client-url';
 
 		return esc_attr( implode( ' ', $classes ) );
+	}
+
+	/**
+	 * Retrieve Image URL.
+	 *
+	 * @since  1.0.0
+	 * @access private
+	 * @static
+	 *
+	 * @return string
+	 */
+	private static function image_url() {
+		$image_id = self::validate( 'merryll_top_logo' );
+
+		if ( empty( $image_id ) ) {
+			return '';
+		}
+
+		return wp_get_attachment_image_src( $image_id, 'full' )[0];
 	}
 }

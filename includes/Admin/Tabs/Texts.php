@@ -82,68 +82,26 @@ class Texts {
 		self::$fields[] = Field::make(
 			'separator',
 			'merryll_modal_bottom_html',
-			esc_html__( 'Consent Modal Deactivation Texts', 'merryll-consent-manager' )
+			esc_html__( 'Consent Modal Toggle All On/Off Texts', 'merryll-consent-manager' )
 		);
 
 		self::$fields[] = Field::make(
 			'text',
 			'merryll_modal_deactivation_title',
-			esc_html__( 'Consent Modal Deactivation Title', 'merryll-consent-manager' )
+			esc_html__( 'Consent Modal Toggle All On/Off Title', 'merryll-consent-manager' )
 		)
 		->set_classes( 'two-col flex-wrap justify-content-end no-top-border' )
-		->set_help_text( esc_html__( 'Please enter the consent modal Deactivation title', 'merryll-consent-manager' ) )
+		->set_help_text( esc_html__( 'Please enter the consent modal toggle all on/off title', 'merryll-consent-manager' ) )
 		->set_default_value( esc_html__( 'Alle deaktivieren', 'merryll-consent-manager' ) );
 
 		self::$fields[] = Field::make(
 			'textarea',
 			'merryll_modal_deactive_desc',
-			esc_html__( 'Consent Modal Deactivation Description', 'merryll-consent-manager' )
+			esc_html__( 'Consent Modal Toggle All On/Off Description', 'merryll-consent-manager' )
 		)
 		->set_classes( 'two-col flex-wrap justify-content-end' )
-		->set_help_text( esc_html__( 'Please enter the consent modal deactivation description', 'merryll-consent-manager' ) )
+		->set_help_text( esc_html__( 'Please enter the consent modal toggle all on/off description', 'merryll-consent-manager' ) )
 		->set_default_value( esc_html__( 'Durch das Deaktivieren aller Dienste werden wir keine personenbezogenen Daten sammeln, benutzen oder übertragen, bis Sie uns Ihre explizite Einwilligung erteilen. Allerdings verhindert das, dass wir Ihnen die bestmögliche Erfahrung auf unserer Website geben können.', 'merryll-consent-manager' ) );
-
-		self::$fields[] = Field::make(
-			'separator',
-			'merryll_modal_other_html',
-			esc_html__( 'Other Texts', 'merryll-consent-manager' )
-		);
-
-		self::$fields[] = Field::make(
-			'text',
-			'merryll_modal_service_singular',
-			esc_html__( 'Service Singular Text', 'merryll-consent-manager' )
-		)
-		->set_classes( 'two-col flex-wrap justify-content-end no-top-border' )
-		->set_help_text( esc_html__( 'Please enter the service singular text', 'merryll-consent-manager' ) )
-		->set_default_value( esc_html__( 'Dienst', 'merryll-consent-manager' ) );
-
-		self::$fields[] = Field::make(
-			'text',
-			'merryll_modal_service_plural',
-			esc_html__( 'Service Plural Text', 'merryll-consent-manager' )
-		)
-		->set_classes( 'two-col flex-wrap justify-content-end' )
-		->set_help_text( esc_html__( 'Please enter the service plural text', 'merryll-consent-manager' ) )
-		->set_default_value( esc_html__( 'Dienste', 'merryll-consent-manager' ) );
-
-		self::$fields[] = Field::make(
-			'text',
-			'merryll_modal_purpose_text',
-			esc_html__( 'Purpose Singular Text', 'merryll-consent-manager' )
-		)
-		->set_classes( 'two-col flex-wrap justify-content-end' )
-		->set_help_text( esc_html__( 'Please enter the purpose singular text', 'merryll-consent-manager' ) )
-		->set_default_value( esc_html__( 'Zweck', 'merryll-consent-manager' ) );
-
-		self::$fields[] = Field::make(
-			'text',
-			'merryll_modal_purpose_plural',
-			esc_html__( 'Purpose Plural Text', 'merryll-consent-manager' )
-		)
-		->set_classes( 'two-col flex-wrap justify-content-end' )
-		->set_help_text( esc_html__( 'Please enter the purpose plural text', 'merryll-consent-manager' ) )
-		->set_default_value( esc_html__( 'Zwecke', 'merryll-consent-manager' ) );
 
 		return new static();
 	}
