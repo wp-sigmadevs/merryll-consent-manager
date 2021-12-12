@@ -1,0 +1,25 @@
+{
+    "presets": [
+        [
+            "@babel/preset-env",
+            {
+                "targets": {
+                    "browsers": [
+                        "last 10 version",
+                        "> 1%",
+                        "ie >= 11",
+                        "last 6 Android versions",
+                        "last 10 ChromeAndroid versions",
+                        "last 10 Chrome versions",
+                        "last 10 Firefox versions",
+                        "last 10 Safari versions",
+                        "last 10 iOS versions",
+                        "last 10 Edge versions",
+                        "last 10 Opera versions"
+                    ]
+                },
+                "debug": true
+            }
+        ]
+    ]
+}

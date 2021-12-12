@@ -1,0 +1,19 @@
+/* ===========================
+	Textarea Field
+==============================*/
+
+.postbox {
+	.cf-textarea {
+		textarea {
+			height: 150px;
+			border-radius: 0;
+			margin-left: auto;
+			margin-right: auto;
+			@extend %transition;
+
+			&::-webkit-inner-spin-button {
+				display: none;
+			}
+		}
+	}
+}

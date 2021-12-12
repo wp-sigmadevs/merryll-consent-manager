@@ -1,0 +1,58 @@
+/* ===========================
+	Tab Field
+==============================*/
+
+.postbox {
+	.cf-container__tabs {
+		padding: 0;
+		background-color: $admin_color;
+		color: $color_white;
+		margin-bottom: 10px;
+		border: 0;
+
+		.cf-container__tabs-list {
+			margin: 0;
+		}
+
+		.cf-container__tabs-item {
+			margin: 0;
+			border: 0;
+			min-width: 140px;
+			font-size: 14px;
+			justify-content: center;
+			background-color: $admin_color;
+			position: relative;
+
+			&:hover {
+				background-color: $admin_hover_color;
+			}
+
+			&.cf-container__tabs-item--current {
+				background-color: $admin_hover_color;
+
+				&::after {
+					top: 100%;
+					left: 50%;
+					border: solid transparent;
+					content: " ";
+					height: 0;
+					width: 0;
+					position: absolute;
+					pointer-events: none;
+					border-top-color: $admin_hover_color;
+					border-width: 10px;
+					margin-left: -10px;
+				}
+			}
+
+			button {
+				color: $color_white;
+				font-weight: 500;
+				cursor: pointer;
+				padding: 17px 15px;
+				display: block;
+				width: 100%;
+			}
+		}
+	}
+}

@@ -1,0 +1,49 @@
+/* ===========================
+	Color Field
+==============================*/
+
+.postbox {
+	.cf-color__toggle {
+		border-radius: 0;
+		color: $text_color;
+		border-color: $text_color;
+
+		.cf-color__preview {
+			width: 40px;
+
+			&:hover,
+			&:focus {
+				border-color: $text_color;
+			}
+		}
+
+		.cf-color__toggle-text {
+			margin-left: 40px;
+		}
+
+		&:active,
+		&:hover,
+		&:focus {
+			border-color: $text_color;
+			color: $text_color;
+
+			.cf-color__preview {
+				border-color: $text_color;
+			}
+		}
+	}
+
+	.image-hover-color,
+	.icon-color-selector {
+		margin-bottom: 15px !important;
+	}
+
+	.cf-color__reset {
+		color: $text_color;
+
+		&:hover,
+		&:focus {
+			color: $text_color;
+		}
+	}
+}

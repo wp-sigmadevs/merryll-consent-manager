@@ -1,0 +1,47 @@
+/* ===========================
+	HTML Field
+==============================*/
+
+.postbox {
+	.cf-html__content {
+		padding: 10px;
+		background: $admin_offset_color;
+		border: 1px solid #ddd;
+		font-size: 14px;
+	}
+
+	.cf-html {
+		&.section-title {
+			.cf-field__head {
+				display: none;
+			}
+
+			.cf-field__body {
+				flex: 0 0 100% !important;
+				max-width: 100% !important;
+			}
+
+			.cf-html__content {
+				padding: 0;
+				background: no-repeat;
+				border: 0;
+
+				h4 {
+					display: inline-block;
+					margin: 0;
+					background: $admin_offset_color;
+					padding: 15px;
+					border-left: 5px solid $admin_color;
+				}
+			}
+
+			&.top-border {
+				.cf-html__content {
+					h4 {
+						margin-top: 1.33em;
+					}
+				}
+			}
+		}
+	}
+}

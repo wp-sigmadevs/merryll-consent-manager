@@ -1,0 +1,31 @@
+{
+	"name": "merryll/merryll-consent-manager",
+	"description": "An elegant way to make your website ready for GDPR regulations.",
+	"type": "wordpress-plugin",
+	"keywords": [ "wordpress", "plugin" ],
+	"homepage": "https://merryll.de/",
+	"require": {
+		"htmlburger/carbon-fields": "^3.3"
+	},
+	"license": "GPL",
+	"authors": [
+		{
+			"name": "S.M. Rafiz",
+			"email": "srafiz@sigmadevs.com"
+		}
+	],
+	"support": {
+		"issues": "https://github.com/wp-sigmadevs/merryll-consent-manager/issues",
+		"source": "https://github.com/wp-sigmadevs/merryll-consent-manager"
+	},
+	"autoload": {
+		"files": [
+			"./vendor/extensions/carbon-field-switch/field.php",
+			"./vendor/htmlburger/carbon-fields/core/functions.php"
+		],
+		"psr-4": {
+			"Merryll\\Merryll_Consent_Manager\\": "./includes",
+			"Carbon_Field_Switch\\": "./vendor/extensions/carbon-field-switch/core/"
+		}
+	}
+}

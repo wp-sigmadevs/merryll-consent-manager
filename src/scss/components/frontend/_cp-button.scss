@@ -1,0 +1,77 @@
+/* ===========================
+	Button
+==============================*/
+
+.merryll-modal {
+	.cookie-modal {
+		.cm-btn {
+			flex: 0 0 100%;
+			font-size: $public_modal_font_size !important;
+			margin-bottom: 10px;
+			min-width: auto;
+			padding: 9px 15px;
+			color: $color_white !important;
+			border: 0;
+			transition: all 0.7s cubic-bezier(0.2, 1, 0.22, 1);
+			cursor: pointer;
+			border-radius: 0;
+
+			@include media-only(tablet) {
+				// padding: 9px 15px;
+				min-width: 170px;
+			}
+
+			@include media-only(mobile) {
+				flex: 0 0 auto;
+				font-size: 14px !important;
+				margin-bottom: 0;
+				width: auto;
+				margin-left: 15px;
+				margin-right: 15px;
+			}
+
+			&.cm-btn-accept-all {
+				background: $public_modal_acc_all_bg !important;
+
+				&:hover,
+				&:focus {
+					background: $public_modal_acc_all_hover !important;
+				}
+			}
+
+			&.cm-btn-accept {
+				background: $public_modal_acc_sel_bg !important;
+
+				&:hover,
+				&:focus {
+					background: $public_modal_acc_sel_hover !important;
+				}
+			}
+
+			&.cm-btn-decline {
+				background: $public_modal_rej_bg !important;
+
+				&:hover,
+				&:focus {
+					background: $public_modal_rej_hover !important;
+				}
+			}
+		}
+	}
+
+	&.slight-round-btn {
+		.cookie-modal {
+			.cm-btn {
+				border-radius: 4px;
+			}
+		}
+	}
+
+	&.round-btn {
+		.cookie-modal {
+			.cm-btn {
+				border-radius: 25px;
+			}
+		}
+	}
+}

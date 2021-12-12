@@ -1,0 +1,76 @@
+/* ===========================
+	Complex Field
+==============================*/
+
+.postbox {
+	.cf-complex {
+		&.cf-field {
+			border-top: 0;
+			border-right: 0;
+		}
+
+		.cf-complex__placeholder-label {
+			margin-bottom: 40px;
+
+			+.cf-complex__inserter {
+				button {
+					min-width: 100px;
+					height: 32px;
+					@extend %transition;
+					outline: 0;
+					background: $admin_color;
+					color: $color_white;
+
+					&:hover,
+					&:focus {
+						background: $admin_hover_color;
+						box-shadow: none;
+					}
+				}
+			}
+		}
+
+		.cf-complex__actions {
+			margin-top: 40px;
+
+			button {
+				min-width: 100px;
+				height: 32px;
+				@extend %transition;
+				outline: 0;
+
+				&.cf-complex__inserter-button {
+					background: $admin_color;
+					color: $color_white;
+
+					&:hover,
+					&:focus {
+						background: $admin_hover_color;
+						box-shadow: none;
+					}
+				}
+			}
+		}
+
+		.cf-complex__group-head {
+			border: 1px solid $admin_offset_color;
+			background-color: $admin_offset_color;
+
+			.cf-complex__group-index {
+				background: $admin_color;
+				color: $color_white;
+			}
+		}
+
+		.cf-complex__group-body {
+			border-right: 1px solid $admin_offset_color;
+			margin-top: -2px;
+		}
+
+		&.cf-complex__group--collapsed {
+			.cf-complex__group-index {
+				margin-bottom: -2px;
+			}
+		}
+	}
+}

@@ -1,0 +1,94 @@
+/* ===========================
+	Common Field
+==============================*/
+
+.postbox {
+	.cf-container__fields {
+		margin: 0;
+	}
+
+	.cf-container {
+		.cf-field {
+			margin-bottom: 12px;
+
+			&.two-col:not(.cf-switch) {
+				padding: 30px;
+				border-right: 0;
+				margin: 0;
+
+				.cf-field__head {
+					flex: 0 0 40%;
+					max-width: 40%;
+				}
+
+				.cf-field__body,
+				.cf-field__help {
+					flex: 0 0 60%;
+					max-width: 60%;
+				}
+
+				.cf-field__head {
+					.cf-field__label {
+						text-align: left;
+						font-size: 14px;
+						padding: 0;
+						padding-right: 15px;
+					}
+				}
+
+				input {
+					&[type="text"],
+					&[type="number"] {
+						height: 40px;
+						@extend %transition;
+					}
+				}
+			}
+
+			&.two-col {
+				&.no-top-border {
+					border-top: 0;
+				}
+
+				&.cf-switch {
+					padding: 30px;
+					border-right: 0;
+					margin: 0;
+
+					.cf-field__help {
+						flex: 0 0 60%;
+						max-width: 60%;
+					}
+
+					.cf-switch-wrapper {
+						@extend %d-flex;
+						align-items: center;
+
+						.cf-field__label {
+							flex: 0 0 40%;
+							max-width: 40%;
+							padding-bottom: 0;
+							margin-bottom: 0;
+							text-align: left;
+							font-size: 14px;
+						}
+
+						input {
+							&[type="checkbox"] {
+								flex: 0 0 60%;
+								max-width: 60%;
+							}
+						}
+					}
+				}
+			}
+
+			&.cf-color {
+				button.button {
+					height: 40px;
+					padding: 0 18px;
+				}
+			}
+		}
+	}
+}

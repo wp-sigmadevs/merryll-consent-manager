@@ -1,0 +1,19 @@
+/* ===========================
+	Select Field
+==============================*/
+
+.postbox {
+	.cf-select__input {
+		height: 40px !important;
+		line-height: 36px;
+		color: $text_color;
+		outline: 0;
+		border-radius: 0;
+		max-width: 100% !important;
+
+		&:hover,
+		&:focus {
+			color: $text_color;
+		}
+	}
+}

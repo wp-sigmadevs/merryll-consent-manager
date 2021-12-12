@@ -1,0 +1,127 @@
+/* ===========================
+	Layout: Header
+==============================*/
+
+.klaro {
+	&.merryll-modal {
+		.cookie-modal {
+			.cm-body {
+				padding: 20px 0;
+				padding-right: 20px;
+
+				@include media-only(mobile) {
+					max-height: 250px;
+					overflow: auto;
+				}
+
+				ul {
+					display: block;
+					list-style: none;
+
+					&.cm-services,
+					&.cm-purposes {
+						padding: 0;
+						margin: 0;
+
+						li {
+							&.cm-service,
+							&.cm-purpose {
+								position: relative;
+								line-height: 20px;
+								vertical-align: middle;
+								padding-left: 50px;
+								min-height: 40px;
+								margin-bottom: 15px;
+
+								&.cm-toggle-all {
+									border-top: 1px solid $public_modal_divider;
+									margin-top: 15px;
+									padding-top: 15px;
+									margin-bottom: 0;
+								}
+
+								.purposes,
+								.cm-services,
+								.cm-list-description {
+									padding-left: 5px;
+								}
+							}
+						}
+
+						.cm-list-label {
+							display: block;
+							padding-left: 5px;
+							margin-bottom: 10px;
+							letter-spacing: var(--merryll-public-heading-ls);
+						}
+
+						.cm-content {
+							margin-left: -80px;
+							margin-bottom: 20px;
+							display: none;
+
+							@include media-only(mobile) {
+								margin-left: -40px;
+								padding-left: 40px;
+							}
+
+							&.expanded {
+								margin-top: 10px;
+								display: block;
+								padding-left: 50px;
+
+								@include media-only(mobile) {
+									padding-left: 40px;
+								}
+							}
+
+							p {
+								&.purposes {
+									margin-top: 5px;
+									opacity: 0.6;
+								}
+							}
+						}
+					}
+				}
+
+				span {
+					display: inline-block;
+					width: auto;
+				}
+
+				.cm-list-title {
+					font-weight: 600;
+					font-size: $public_modal_font_size;
+					padding-top: 5px;
+				}
+
+				.cm-list-description {
+					padding-top: 0;
+				}
+			}
+
+			p {
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}
+
+.merryll-modal-active {
+	overflow-y: hidden;
+	position: relative;
+
+	@include media-only(mobile) {
+		overflow-y: initial;
+		position: initial;
+	}
+}
+
+.merryll-modal-active {
+	.merryll-modal {
+		z-index: 99992;
+	}
+}

@@ -1,0 +1,43 @@
+//-------------------- Common Variables --------------------//
+$text_color: #333;
+$color_white: #fff;
+$color_offset: #f1f1f1;
+
+//-------------------- Admin Variables --------------------//
+$admin_color: var(--merryll-admin-color);
+$admin_hover_color: var(--merryll-admin-hover-color);
+$admin_offset_color: var(--merryll-admin-offset-color);
+
+//-------------------- Frontend Variables --------------------//
+$public_modal_bg_color: var(--merryll-public-modal-bg);
+$public_modal_text_color: var(--merryll-public-modal-text);
+$public_modal_link_color: var(--merryll-public-modal-link);
+$public_modal_link_hover: var(--merryll-public-modal-link-hover);
+$public_modal_switch_on: var(--merryll-public-modal-switch-on);
+$public_modal_divider: var(--merryll-public-modal-divider);
+$public_modal_heading_font_size: var(--merryll-public-heading-font-size);
+$public_modal_font_size: var(--merryll-public-font-size);
+$public_modal_acc_all_bg: var(--merryll-public-acc-all-btn-bg);
+$public_modal_acc_all_hover: var(--merryll-public-acc-all-btn-bg-hover);
+$public_modal_acc_sel_bg: var(--merryll-public-acc-sel-btn-bg);
+$public_modal_acc_sel_hover: var(--merryll-public-acc-sel-btn-bg-hover);
+$public_modal_rej_bg: var(--merryll-public-rej-btn-bg);
+$public_modal_rej_hover: var(--merryll-public-rej-btn-bg-hover);
+$public_consent_btn_bg: var(--merryll-public-consent-btn-bg);
+$public_consent_btn_hover_bg: var(--merryll-public-consent-btn-hover-bg);
+$public_consent_btn_text: var(--merryll-public-consent-btn-text);
+$public_consent_btn_text_hover: var(--merryll-public-consent-btn-hover-text);
+
+$merryll_xlg_screen: 1200px !default;
+$merryll_lg_screen: 1025px !default;
+$merryll_md_screen: 992px !default;
+$merryll_sm_screen: 768px !default;
+$merryll_vsm_screen: 576px !default;
+
+$merryll-breakpoints: (
+	"ultra": $merryll-xlg-screen,
+	"wide": $merryll-lg-screen,
+	"notebook": $merryll-md-screen,
+	"tablet": $merryll-sm-screen,
+	"mobile": $merryll-vsm-screen
+);

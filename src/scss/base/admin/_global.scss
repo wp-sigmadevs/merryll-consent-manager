@@ -1,0 +1,45 @@
+/* ===========================
+	Global Admin CSS
+==============================*/
+:root {
+    --merryll-admin-color: #0073aa;
+    --merryll-admin-hover-color: #135e96;
+    --merryll-admin-offset-color: #edf1fa;
+}
+
+.cf-field {
+	&[hidden] {
+		display: none !important;
+	}
+}
+
+.d-flex {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.two-col {
+	@extend %d-flex;
+	align-items: center;
+}
+
+.flex-wrap {
+	flex-wrap: wrap;
+}
+
+.justify-content-end {
+	justify-content: flex-end;
+}
+
+.align-items-start {
+	align-items: flex-start;
+}
+
+.justify-content-start {
+	justify-content: flex-start;
+}
+
+.postbox-header {
+	z-index: 9;
+	position: relative;
+}
